@@ -30,6 +30,24 @@
 // library.  Edit this if you want to remove some bootstrap functionality.
 @import 'mixins/bootstrap-minimal';
 
+// Tools of the trade
+@import "extends/non-semantic-helpers";
+@import "mixins/alerted";
+@import "mixins/animation";
+@import "mixins/cross-browser-opacity";
+@import "mixins/currency";
+@import "mixins/ghost-vertical-align";
+@import 'mixins/gradient-overrides';
+@import "mixins/hui_tooltip";
+@import "mixins/placeholder-text";
+@import "mixins/rem-font-sizing";
+@import "mixins/sass-prefixer";
+@import "mixins/svg-background-image-fallback";
+@import "mixins/transition";
+@import "mixins/triangle";
+@import "mixins/truncate";
+
+
 // The bootstrap default theme is entirely optional.  Enable this below.
 // @import "bootstrap/theme";
 
