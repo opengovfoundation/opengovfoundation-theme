@@ -44,7 +44,7 @@
 			return;
 		}
 
-		button.on( 'click.twentythirteen', function() {
+		button.on( 'click.opengovfoundation', function() {
 			nav.toggleClass( 'toggled-on' );
 			if ( nav.hasClass( 'toggled-on' ) ) {
 				$( this ).attr( 'aria-expanded', 'true' );
@@ -57,7 +57,7 @@
 
 		// Fix sub-menus for touch devices.
 		if ( 'ontouchstart' in window ) {
-			menu.find( '.menu-item-has-children > a, .page_item_has_children > a' ).on( 'touchstart.twentythirteen', function( e ) {
+			menu.find( '.menu-item-has-children > a, .page_item_has_children > a' ).on( 'touchstart.opengovfoundation', function( e ) {
 				var el = $( this ).parent( 'li' );
 
 				if ( ! el.hasClass( 'focus' ) ) {
@@ -69,7 +69,7 @@
 		}
 
 		// Better focus for hidden submenu items for accessibility.
-		menu.find( 'a' ).on( 'focus.twentythirteen blur.twentythirteen', function() {
+		menu.find( 'a' ).on( 'focus.opengovfoundation blur.opengovfoundation', function() {
 			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
 		} );
 	} )();
@@ -93,8 +93,8 @@
 	}
 
 	_window
-		.on( 'load.twentythirteen', onResizeARIA )
-		.on( 'resize.twentythirteen', function() {
+		.on( 'load.opengovfoundation', onResizeARIA )
+		.on( 'resize.opengovfoundation', function() {
 			onResizeARIA();
 	} );
 
@@ -104,7 +104,7 @@
 	 *
 	 * @link http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
 	 */
-	_window.on( 'hashchange.twentythirteen', function() {
+	_window.on( 'hashchange.opengovfoundation', function() {
 		var element = document.getElementById( location.hash.substring( 1 ) );
 
 		if ( element ) {
