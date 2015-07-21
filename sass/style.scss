@@ -51,17 +51,21 @@
 // The bootstrap default theme is entirely optional.  Enable this below.
 // @import "bootstrap/theme";
 
+// GRID  ME BABY ONE MORE TIME
+@import "../bower_components/susy/sass/susy";
+@import 'modules/grid';
+
 // Page modules
 
 // Our global reusable styles.
 @import 'modules/global';
 
-// @import 'modules/header';
+@import 'modules/header';
 // @import 'modules/footer';
 
 
 // Page-specific styles
 
-// @import 'pages/home';
+@import 'pages/home';
 // @import 'pages/document';
 // @import 'pages/login';

@@ -8,9 +8,26 @@ html {
 
 // Set our sizes.
 // Generated your own at http://www.gridlover.net/app/
-body, html {
+body,
+html {
     font-size: $base-font-size;
     line-height: $base-line-height * $base-font-size; // Get our units back.
+    margin: 0;
+    padding: 0 !important;
+}
+
+body {
+  @include container(100%);
+  background-image: url("images/short_header_bkgnd@2x.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding: 0 3rem;
+}
+
+body.home {
+  background-image: url("images/feature_image_1@2x.jpg");
+  background-size: 100% auto;
 }
 
 h1 {
