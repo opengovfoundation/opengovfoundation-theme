@@ -1,27 +1,35 @@
+
+h1 {
+    @include font-size(80px);
+    &.border {border-bottom: 0.875rem solid $white;}
+}
+
 body header#masthead {
   height: 12.5rem; // 800px
 
   div.home-head-block { display: none; }
+  h1 {
+    @include font-size(96px);
+  }
 }
 
 body.home header#masthead {
-  height: 50rem; // 800px
-  padding: 5rem 0 0 0;
+  min-height: 50rem; // 800px
+  padding: 20rem 0 0 0;
 
   div.home-head-block {
-    @include span(13 of 24);
     display: block;
   }
 }
 
 header {
-  color: $white;
+  color: $dark-grey;
   margin: 0;
   padding: 0;
   position: relative;
 
   &#masthead {
-
+    color: $white;
   } // &#masthead
 
   button.menu-toggle {
@@ -32,16 +40,11 @@ header {
     visibility: hidden;
   } // .skip-link
 
-  h1 {
-    border-bottom: 0.875rem solid $white;
-    font-family: $accent-font;
-    @include font-size(96px);
-  } // h1
-
   h2 {
     font-family: $main-font;
     @include font-size(22px);
   } // h2
+
   a {
 
     &:link,
@@ -61,23 +64,18 @@ header {
 
 #navbar {
   background-color: rgba(0,0,0,0.4);
-  height: 6.25rem;
-  overflow: hidden;
   position: absolute;
     top: 0;
     left: 0;
   width: 100%;
-
-  a.home-link {
-    float: left;
+  @include breakpoint($screen-md-min) {
+    text-align:right;
   }
-
   ul {
     @extend %list-in-disguise;
-    float: right;
 
     li {
-      @extend %list-in-disguise;
+      @extend %clearfix;
       display: inline-block;
       padding: 1rem;
       text-align: center;

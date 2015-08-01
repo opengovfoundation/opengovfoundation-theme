@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="container content-area">
 		<div id="content" class="site-content" role="main">
 
 			<?php /* The loop */ ?>

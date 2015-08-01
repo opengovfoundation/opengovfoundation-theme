@@ -33,22 +33,28 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
 		<header id="masthead" class="site-header" role="banner">
-      <div class="home-head-block">
-  			<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-  			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-      </div>
+			<div class="container">
+				<div class="home-head-block col-sm-6">
+					<h1 class="site-title border"><?php $key="masthead-header"; echo get_post_meta($post->ID, $key, true); ?></h1>
+					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+				</div>
 
-			<div id="navbar" class="navbar">
-  			<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-  			  <img src="<?php echo get_bloginfo('template_directory');?>/images/opengov_logo@2x.png" width="284" height="60" alt="Opengov Logo" class="opengov_logo">
-        </a>
-				<nav id="site-navigation" class="navigation main-navigation" role="navigation">
-					<button class="menu-toggle"><?php _e( 'Menu', 'opengovfoundation' ); ?></button>
-					<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'opengovfoundation' ); ?>"><?php _e( 'Skip to content', 'opengovfoundation' ); ?></a>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
-           <? // php get_search_form(); ?>
-				</nav><!-- #site-navigation -->
-			</div><!-- #navbar -->
+				<div id="navbar" class="navbar">
+					<div class="container">
+						<div class="row">
+							<a class="home-link col-md-4" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+								<img src="<?php echo get_bloginfo('template_directory');?>/images/opengov_logo@2x.png" width="284" height="60" alt="Opengov Logo" class="opengov_logo">
+							</a>
+							<nav id="site-navigation" class="navigation main-navigation col-md-8" role="navigation">
+								<button class="menu-toggle"><?php _e( 'Menu', 'opengovfoundation' ); ?></button>
+								<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'opengovfoundation' ); ?>"><?php _e( 'Skip to content', 'opengovfoundation' ); ?></a>
+								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
+							   <? // php get_search_form(); ?>
+							</nav><!-- #site-navigation -->
+						</div>
+					</div>
+				</div><!-- #navbar -->
+			</div><!- .container -->
 		</header><!-- #masthead -->
 
 		<div id="main" class="site-main">

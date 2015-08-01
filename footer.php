@@ -12,12 +12,29 @@
 
 		</div><!-- #main -->
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<?php get_sidebar( 'main' ); ?>
-
-			<div class="site-info">
-				<?php do_action( 'opengovfoundation_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'opengovfoundation' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'opengovfoundation' ); ?>"><?php printf( __( 'Proudly powered by %s', 'opengovfoundation' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
+			<div class="container">
+				<div class="row contact">
+					<div class="col-md-1 icon">
+						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_contact_white.png" alt="">
+					</div>
+					<div class="col-md-3">
+						<h2>Contact OpenGov</h2>
+					</div>
+					<div class="col-md-4">
+						<h3>Physical:</h3>
+						<p>1875 Connecticut Ave NW<br>
+						10th Floor<br>
+						Washington DC 20002</p>
+					</div>
+					<div class="col-md-4">
+						<h3>Email:</h3>
+						<p><a href="#">sayhello@opengovfoundation.org</a></p>
+					</div>
+				</div>
+				<div class="row padded-row">
+					<p>&copy;2015 OpenGov Foundation. All Rights Reserved.</p>
+				</div>
+			</div>
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
 

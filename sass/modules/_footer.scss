@@ -1,0 +1,10 @@
+footer.site-footer {
+	background:$light-grey;
+	.contact {
+		background:lighten($light-grey,10%);
+	}
+	.icon {
+		background:$blue;
+		padding:1rem;
+	}
+}

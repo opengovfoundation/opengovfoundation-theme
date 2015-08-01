@@ -10205,13 +10205,23 @@ hr {
   margin-bottom: 2rem;
 }
 
+/* line 69, sass/extends/_non-semantic-helpers.scss */
+#navbar ul li:after, body.home #projects ul li:after, #navbar ul li:before, body.home #projects ul li:before {
+  content: " ";
+  display: table;
+}
+/* line 75, sass/extends/_non-semantic-helpers.scss */
+#navbar ul li:after, body.home #projects ul li:after {
+  clear: both;
+}
+
 /* line 91, sass/extends/_non-semantic-helpers.scss */
-#navbar ul, #navbar ul li {
+#navbar ul, body.home #projects ul, .socialmedia {
   margin: 0;
   padding: 0;
 }
 /* line 95, sass/extends/_non-semantic-helpers.scss */
-#navbar ul li {
+#navbar ul li, body.home #projects ul li, .socialmedia li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -10270,28 +10280,22 @@ body:after {
 }
 
 /* line 28, sass/modules/_global.scss */
-body.home {
-  background-image: url("images/feature_image_1@2x.jpg");
-  background-size: 100% auto;
-}
-
-/* line 33, sass/modules/_global.scss */
 h1 {
   font-size: 3.25rem;
   line-height: 6rem;
-  margin-top: 4rem;
+  margin-top: 0;
   margin-bottom: 2rem;
+  font-family: "Patua One", Georgia, "Times New Roman", Times, serif;
 }
 
-/* line 40, sass/modules/_global.scss */
+/* line 36, sass/modules/_global.scss */
 h2 {
   font-size: 2.5rem;
-  line-height: 4rem;
-  margin-top: 4rem;
+  line-height: 2rem;
   margin-bottom: 2rem;
 }
 
-/* line 47, sass/modules/_global.scss */
+/* line 42, sass/modules/_global.scss */
 h3 {
   font-size: 1.8125rem;
   line-height: 2rem;
@@ -10299,7 +10303,7 @@ h3 {
   margin-bottom: 2rem;
 }
 
-/* line 54, sass/modules/_global.scss */
+/* line 49, sass/modules/_global.scss */
 h4 {
   font-size: 1rem;
   line-height: 2rem;
@@ -10307,7 +10311,7 @@ h4 {
   margin-bottom: 2rem;
 }
 
-/* line 61, sass/modules/_global.scss */
+/* line 56, sass/modules/_global.scss */
 h5 {
   font-size: 1rem;
   line-height: 2rem;
@@ -10315,7 +10319,7 @@ h5 {
   margin-bottom: 2rem;
 }
 
-/* line 68, sass/modules/_global.scss */
+/* line 63, sass/modules/_global.scss */
 h6 {
   font-size: 1rem;
   line-height: 2rem;
@@ -10323,23 +10327,25 @@ h6 {
   margin-bottom: 0rem;
 }
 
-/* line 75, sass/modules/_global.scss */
+/* line 70, sass/modules/_global.scss */
 p, ul, ol, pre, table, blockquote {
   margin-top: 0;
   margin-bottom: 2rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
 }
-/* line 79, sass/modules/_global.scss */
+/* line 75, sass/modules/_global.scss */
 p:last-child, ul:last-child, ol:last-child, pre:last-child, table:last-child, blockquote:last-child {
   margin-bottom: 0;
 }
 
-/* line 85, sass/modules/_global.scss */
+/* line 81, sass/modules/_global.scss */
 dt, dd {
   line-height: 2rem;
 }
 
 /* Button replacements. */
-/* line 90, sass/modules/_global.scss */
+/* line 86, sass/modules/_global.scss */
 .button {
   border: none;
   font-size: 1.05rem;
@@ -10348,18 +10354,30 @@ dt, dd {
   padding: 0 10px;
 }
 
-/* line 99, sass/modules/_global.scss */
+/* line 95, sass/modules/_global.scss */
 .action-button {
   text-transform: uppercase;
 }
 
-/* line 104, sass/modules/_global.scss */
+/* line 100, sass/modules/_global.scss */
 .reject-button {
   text-transform: uppercase;
 }
 
+/* Helpers */
+/* line 107, sass/modules/_global.scss */
+.padded-row {
+  padding-top: 4rem;
+}
+
+/* line 111, sass/modules/_global.scss */
+.invert {
+  background: #4a4f51;
+  color: #ffffff !important;
+}
+
 /* Debugging */
-/* line 112, sass/modules/_global.scss */
+/* line 119, sass/modules/_global.scss */
 .TYPE-DEBUG {
   position: absolute;
   top: 0;
@@ -10370,97 +10388,149 @@ dt, dd {
   z-index: -1;
 }
 
-/* line 1, sass/modules/_header.scss */
-body header#masthead {
-  height: 12.5rem;
+/* line 2, sass/modules/_header.scss */
+h1 {
+  font-size: 80px;
+  font-size: 5rem;
 }
 /* line 4, sass/modules/_header.scss */
-body header#masthead div.home-head-block {
-  display: none;
+h1.border {
+  border-bottom: 0.875rem solid #ffffff;
 }
 
 /* line 7, sass/modules/_header.scss */
-body.home header#masthead {
-  height: 50rem;
-  padding: 5rem 0 0 0;
+body header#masthead {
+  height: 12.5rem;
+}
+/* line 10, sass/modules/_header.scss */
+body header#masthead div.home-head-block {
+  display: none;
 }
 /* line 11, sass/modules/_header.scss */
+body header#masthead h1 {
+  font-size: 96px;
+  font-size: 6rem;
+}
+
+/* line 16, sass/modules/_header.scss */
+body.home header#masthead {
+  min-height: 50rem;
+  padding: 20rem 0 0 0;
+}
+/* line 20, sass/modules/_header.scss */
 body.home header#masthead div.home-head-block {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 54.16667%;
-  float: left;
-  padding-left: 0.38957%;
-  padding-right: 0.38957%;
   display: block;
 }
 
-/* line 17, sass/modules/_header.scss */
+/* line 25, sass/modules/_header.scss */
 header {
-  color: #ffffff;
+  color: #4a4f51;
   margin: 0;
   padding: 0;
   position: relative;
 }
-/* line 27, sass/modules/_header.scss */
+/* line 31, sass/modules/_header.scss */
+header#masthead {
+  color: #ffffff;
+}
+/* line 35, sass/modules/_header.scss */
 header button.menu-toggle {
   display: none;
 }
-/* line 31, sass/modules/_header.scss */
+/* line 39, sass/modules/_header.scss */
 header .skip-link {
   visibility: hidden;
 }
-/* line 35, sass/modules/_header.scss */
-header h1 {
-  border-bottom: 0.875rem solid #ffffff;
-  font-family: "Patua One", Georgia, "Times New Roman", Times, serif;
-  font-size: 96px;
-  font-size: 6rem;
-}
-/* line 41, sass/modules/_header.scss */
+/* line 43, sass/modules/_header.scss */
 header h2 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
   font-size: 1.375rem;
 }
-/* line 47, sass/modules/_header.scss */
+/* line 50, sass/modules/_header.scss */
 header a:link, header a:visited {
   color: #ffffff;
 }
-/* line 52, sass/modules/_header.scss */
+/* line 55, sass/modules/_header.scss */
 header a:hover, header a:active {
   color: #ffffff;
   text-decoration: none;
 }
 
-/* line 62, sass/modules/_header.scss */
+/* line 65, sass/modules/_header.scss */
 #navbar {
   background-color: rgba(0, 0, 0, 0.4);
-  height: 6.25rem;
-  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
-/* line 71, sass/modules/_header.scss */
-#navbar a.home-link {
-  float: left;
+@media (min-width: 992px) {
+  /* line 65, sass/modules/_header.scss */
+  #navbar {
+    text-align: right;
+  }
 }
-/* line 75, sass/modules/_header.scss */
-#navbar ul {
-  float: right;
-}
-/* line 79, sass/modules/_header.scss */
+/* line 77, sass/modules/_header.scss */
 #navbar ul li {
   display: inline-block;
   padding: 1rem;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 86, sass/modules/_header.scss */
+/* line 84, sass/modules/_header.scss */
 #navbar ul li a {
   font-size: 18px;
   font-size: 1.125rem;
+}
+
+/* line 1, sass/modules/_footer.scss */
+footer.site-footer {
+  background: #d7d7d7;
+}
+/* line 3, sass/modules/_footer.scss */
+footer.site-footer .contact {
+  background: #f1f1f1;
+}
+/* line 6, sass/modules/_footer.scss */
+footer.site-footer .icon {
+  background: #00cae5;
+  padding: 1rem;
+}
+
+/* line 2, sass/pages/_home.scss */
+body.home #masthead {
+  background-image: url("images/feature_image_1@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 11, sass/pages/_home.scss */
+body.home #projects ul li a:link, body.home #projects ul li a:visited {
+  display: block;
+  background: #ffffff;
+}
+
+/* line 3, sass/pages/_contact.scss */
+.socialmedia li {
+  display: inline-block;
+}
+/* line 5, sass/pages/_contact.scss */
+.socialmedia li a:link, .socialmedia li a:visited {
+  background: #4a4f51;
+  display: block;
+  width: 50px;
+  height: 50px;
+  color: #ffffff;
+  text-align: center;
+}
+/* line 12, sass/pages/_contact.scss */
+.socialmedia li a:link .genericon, .socialmedia li a:visited .genericon {
+  font-size: 32px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+/* line 19, sass/pages/_contact.scss */
+.socialmedia li a:hover, .socialmedia li a:active {
+  text-decoration: none;
 }

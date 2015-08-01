@@ -1,3 +1,17 @@
 body.home {
-
+	#masthead {
+		background-image: url("images/feature_image_1@2x.jpg");
+		background-repeat:no-repeat;
+		background-size: cover;
+	}
+	#projects ul {
+	    @extend %list-in-disguise;
+	    li {
+		    @extend %clearfix;
+		    a:link, a:visited {
+		    	display:block;
+		    	background:$white;
+		    }	    	
+	    }
+	}	
 }

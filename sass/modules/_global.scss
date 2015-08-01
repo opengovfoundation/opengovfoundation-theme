@@ -25,22 +25,17 @@ body {
   padding: 0 3rem;
 }
 
-body.home {
-  background-image: url("images/feature_image_1@2x.jpg");
-  background-size: 100% auto;
-}
-
 h1 {
     font-size: 3.25rem;
     line-height: 6rem;
-    margin-top: 4rem;
+    margin-top: 0;
     margin-bottom: 2rem;
+    font-family:$accent-font;
 }
 
 h2 {
     font-size: 2.5rem;
-    line-height: 4rem;
-    margin-top: 4rem;
+    line-height: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -75,7 +70,8 @@ h6 {
 p, ul, ol, pre, table, blockquote {
     margin-top: 0;
     margin-bottom: 2rem;
-
+    font-size:1.3rem;
+    line-height:1.5;
     &:last-child {
         margin-bottom: 0;
     }
@@ -104,6 +100,17 @@ dt, dd {
 .reject-button {
     @extend .btn-warning;
     text-transform: uppercase;
+}
+
+/* Helpers */
+
+.padded-row {
+    padding-top:4rem;
+}
+
+.invert {
+    background:$dark-grey;
+    color:$white!important;
 }
 
 /* Debugging */
