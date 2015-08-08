@@ -1,10 +1,23 @@
 footer.site-footer {
-	background:$light-grey;
+	background:lighten($light-grey,7%);
+
+	p { @include font-size(14px);}
 	.contact {
-		background:lighten($light-grey,10%);
+		margin-top:2rem;
+		background:darken($white,3%);
 	}
 	.icon {
 		background:$blue;
 		padding:1rem;
+	}
+	h2 {
+		font-family: $accent-font;
+	}
+	h3 {
+		@include font-size(12px);
+		margin:0;
+		padding:0;
+		font-weight:bold;
+		text-transform: uppercase;
 	}
 }

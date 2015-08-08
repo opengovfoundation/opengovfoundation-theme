@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<div class="row row-padded">
+				<div class="row padded-row">
 					<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-8'); ?>>
 						<header class="entry-header">
 							<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
@@ -53,13 +53,25 @@ get_header(); ?>
 		<div class="row padded-row invert">
 			<div class="container">
 				<h1>Team</h1>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    	<img src="" alt="" class="img-circle">
+		<h1 class="title">Seamus Kraft</h1>
+		<h2>Executive Director, Co-Founder & Vice-Chairman of the Board</h2>
+    	<p>Bio</p>
+    </div>
+  </div>
+</div>
+
 				<div class="col-md-4">
 					<div class="thumbnail">
 						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_flf.png" alt="">
 						<div class="caption">
 							<h2>Seamus Kraft</h2>
 							<p>Executive Director, Co-Founder & Vice-Chairman of the Board</p>
-							<a href="#">See details</a>
+							<a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">See details</a>
 						</div>
 					</div>
 				</div>
@@ -96,7 +108,7 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="container">
-			<div class="row row-padded">
+			<div class="row padded-row">
 				<h1>Board Members</h1>
 				<div class="col-md-4">
 					<div class="thumbnail">
@@ -186,6 +198,16 @@ get_header(); ?>
 			</div>
 		</div>
 	</div><!-- #primary -->
-
+	<script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js"></script>
+	<script>
+	$('#exampleModal').on('show.bs.modal', function (event) {
+	  var button = $(event.relatedTarget) // Button that triggered the modal
+	  var recipient = button.data('whatever') // Extract info from data-* attributes
+	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+	  var modal = $(this)
+	  modal.find('.title').text('New message to ' + recipient)
+	})
+	</script>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

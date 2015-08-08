@@ -34,7 +34,15 @@ get_header(); ?>
 							<?php edit_post_link( __( 'Edit', 'opengovfoundation' ), '<span class="edit-link">', '</span>' ); ?>
 						</footer><!-- .entry-meta -->
 					</div><!-- .entry-content -->
-
+					<div class="col-md-4">
+						<div class="thumbnail">
+							<img src="/wp-content/themes/opengovfoundation-theme/images/icon_newspaper.png" alt="">
+							<div class="caption">
+								<h2>New on the&nbsp;Blog</h2>
+								<p>A nation-wide, collaborative effort open to all people who want to improve how laws and legislation are produced and presented to citizens of American states and cities.</p>
+							</div>
+						</div>
+					</div>
 				</article><!-- #post -->
 
 				<?php comments_template(); ?>
@@ -84,7 +92,7 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-8 mailinglist">
 					<div class="thumbnail">
 						<div class="row">
 							<div class="col-md-4">
@@ -93,26 +101,25 @@ get_header(); ?>
 								</div>
 							</div>
 							<div class="col-md-8">
-								<form>
-									<div class="form-group">
-										<input type="email" class="form-control" id="email" placeholder="Email Address">
+								<form action="//opengovfoundation.us6.list-manage.com/subscribe?u=9d450bf68b3df1185fc9f62b2&id=0616b4aaba" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+									<div class="mc-field-group form-group">
+										<input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Email">
 									</div>
-									<div class="form-group">
-										<input type="text" class="form-control" id="first" placeholder="First Name">
+									<div class="mc-field-group form-group">
+										<input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME" placeholder="First name">
 									</div>
-									<div class="form-group">
-										<input type="text" class="form-control" id="last" placeholder="Last Name">
+									<div class="mc-field-group form-group">
+										<input type="text" value="" name="LNAME" class="form-control" id="mce-LNAME" placeholder="Last name">
 									</div>
-									<div class="form-group">
-										<input type="text" class="form-control" id="zip" placeholder="Zip Code">
+									<div class="mc-field-group form-group">
+										<input type="text" value="" name="MMERGE3" class="form-control" id="mce-MMERGE3" placeholder="Zip code">
 									</div>
-									<label class="radio-inline">
-									  <input type="radio" name="preferred-format" id="html" value="HTML"> HTML
-									</label>
-									<label class="radio-inline">
-									  <input type="radio" name="preferred-format" id="text" value="Text"> Text
-									</label>
-									<button type="submit" class="btn btn-default">Subscribe to List</button>
+									<div id="mce-responses" class="clear">
+										<div class="response" id="mce-error-response" style="display:none"></div>
+										<div class="response" id="mce-success-response" style="display:none"></div>
+									</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+									<div style="position: absolute; left: -5000px;"><input type="text" name="b_9d450bf68b3df1185fc9f62b2_0616b4aaba" tabindex="-1" value=""></div>
+									<div class="clear"><button type="submit" value="Subscribe to List" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-primary">Subscribe to List</button></div>
 								</form>
 							</div>
 						</div>

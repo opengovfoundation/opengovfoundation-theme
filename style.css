@@ -10271,6 +10271,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   padding: 0 3rem;
+  color: #4a4f51;
 }
 /* line 12, bower_components/susy/sass/susy/output/support/_clearfix.scss */
 body:after {
@@ -10279,23 +10280,23 @@ body:after {
   clear: both;
 }
 
-/* line 28, sass/modules/_global.scss */
+/* line 33, sass/modules/_global.scss */
 h1 {
   font-size: 3.25rem;
-  line-height: 6rem;
+  line-height: 3.25rem;
   margin-top: 0;
   margin-bottom: 2rem;
   font-family: "Patua One", Georgia, "Times New Roman", Times, serif;
 }
 
-/* line 36, sass/modules/_global.scss */
+/* line 41, sass/modules/_global.scss */
 h2 {
   font-size: 2.5rem;
   line-height: 2rem;
   margin-bottom: 2rem;
 }
 
-/* line 42, sass/modules/_global.scss */
+/* line 47, sass/modules/_global.scss */
 h3 {
   font-size: 1.8125rem;
   line-height: 2rem;
@@ -10303,7 +10304,7 @@ h3 {
   margin-bottom: 2rem;
 }
 
-/* line 49, sass/modules/_global.scss */
+/* line 54, sass/modules/_global.scss */
 h4 {
   font-size: 1rem;
   line-height: 2rem;
@@ -10311,7 +10312,7 @@ h4 {
   margin-bottom: 2rem;
 }
 
-/* line 56, sass/modules/_global.scss */
+/* line 61, sass/modules/_global.scss */
 h5 {
   font-size: 1rem;
   line-height: 2rem;
@@ -10319,7 +10320,7 @@ h5 {
   margin-bottom: 2rem;
 }
 
-/* line 63, sass/modules/_global.scss */
+/* line 68, sass/modules/_global.scss */
 h6 {
   font-size: 1rem;
   line-height: 2rem;
@@ -10327,25 +10328,25 @@ h6 {
   margin-bottom: 0rem;
 }
 
-/* line 70, sass/modules/_global.scss */
+/* line 75, sass/modules/_global.scss */
 p, ul, ol, pre, table, blockquote {
   margin-top: 0;
   margin-bottom: 2rem;
-  font-size: 1.3rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.2;
 }
-/* line 75, sass/modules/_global.scss */
+/* line 80, sass/modules/_global.scss */
 p:last-child, ul:last-child, ol:last-child, pre:last-child, table:last-child, blockquote:last-child {
   margin-bottom: 0;
 }
 
-/* line 81, sass/modules/_global.scss */
+/* line 86, sass/modules/_global.scss */
 dt, dd {
   line-height: 2rem;
 }
 
 /* Button replacements. */
-/* line 86, sass/modules/_global.scss */
+/* line 91, sass/modules/_global.scss */
 .button {
   border: none;
   font-size: 1.05rem;
@@ -10354,30 +10355,53 @@ dt, dd {
   padding: 0 10px;
 }
 
-/* line 95, sass/modules/_global.scss */
+/* line 100, sass/modules/_global.scss */
 .action-button {
   text-transform: uppercase;
 }
 
-/* line 100, sass/modules/_global.scss */
+/* line 105, sass/modules/_global.scss */
 .reject-button {
   text-transform: uppercase;
 }
 
 /* Helpers */
-/* line 107, sass/modules/_global.scss */
+/* line 112, sass/modules/_global.scss */
 .padded-row {
   padding-top: 4rem;
 }
 
-/* line 111, sass/modules/_global.scss */
+/* line 116, sass/modules/_global.scss */
 .invert {
   background: #4a4f51;
   color: #ffffff !important;
 }
 
+/* line 121, sass/modules/_global.scss */
+.thumbnail {
+  border-radius: 0;
+  padding: 1.5rem;
+  background: #f7f7f7;
+  border: none;
+}
+/* line 126, sass/modules/_global.scss */
+.thumbnail h2 {
+  font-family: "Patua One", Georgia, "Times New Roman", Times, serif;
+  line-height: 1;
+  color: #4a4f51;
+  text-align: center;
+  padding-bottom: .5rem;
+  border-bottom: 8px solid #4a4f51;
+  margin: .5rem 0 1rem 0;
+}
+/* line 135, sass/modules/_global.scss */
+.thumbnail p {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
 /* Debugging */
-/* line 119, sass/modules/_global.scss */
+/* line 144, sass/modules/_global.scss */
 .TYPE-DEBUG {
   position: absolute;
   top: 0;
@@ -10388,28 +10412,24 @@ dt, dd {
   z-index: -1;
 }
 
-/* line 2, sass/modules/_header.scss */
-h1 {
-  font-size: 80px;
-  font-size: 5rem;
-}
-/* line 4, sass/modules/_header.scss */
+/* line 3, sass/modules/_header.scss */
 h1.border {
   border-bottom: 0.875rem solid #ffffff;
 }
 
-/* line 7, sass/modules/_header.scss */
+/* line 6, sass/modules/_header.scss */
 body header#masthead {
   height: 12.5rem;
 }
-/* line 10, sass/modules/_header.scss */
+/* line 9, sass/modules/_header.scss */
 body header#masthead div.home-head-block {
   display: none;
 }
-/* line 11, sass/modules/_header.scss */
+/* line 10, sass/modules/_header.scss */
 body header#masthead h1 {
-  font-size: 96px;
-  font-size: 6rem;
+  font-size: 90px;
+  font-size: 5.625rem;
+  line-height: 1;
 }
 
 /* line 16, sass/modules/_header.scss */
@@ -10439,13 +10459,13 @@ header button.menu-toggle {
 }
 /* line 39, sass/modules/_header.scss */
 header .skip-link {
-  visibility: hidden;
+  display: none;
 }
 /* line 43, sass/modules/_header.scss */
 header h2 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 22px;
-  font-size: 1.375rem;
+  font-size: 24px;
+  font-size: 1.5rem;
 }
 /* line 50, sass/modules/_header.scss */
 header a:link, header a:visited {
@@ -10458,44 +10478,90 @@ header a:hover, header a:active {
 }
 
 /* line 65, sass/modules/_header.scss */
+.home-link {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  padding: .75rem 15px;
+}
+
+/* line 72, sass/modules/_header.scss */
 #navbar {
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  border: 0 !important;
 }
 @media (min-width: 992px) {
-  /* line 65, sass/modules/_header.scss */
+  /* line 72, sass/modules/_header.scss */
   #navbar {
     text-align: right;
   }
 }
-/* line 77, sass/modules/_header.scss */
+/* line 85, sass/modules/_header.scss */
 #navbar ul li {
   display: inline-block;
-  padding: 1rem;
+}
+/* line 88, sass/modules/_header.scss */
+#navbar ul li a {
+  font-size: 16px;
+  font-size: 1rem;
+  display: block;
+  padding: 1.5rem 2rem .5rem 2rem;
   text-align: center;
   text-transform: uppercase;
+  border-bottom: 1rem solid transparent;
 }
-/* line 84, sass/modules/_header.scss */
-#navbar ul li a {
-  font-size: 18px;
-  font-size: 1.125rem;
+/* line 95, sass/modules/_header.scss */
+#navbar ul li a:hover {
+  border-bottom: 1rem solid #ff9d00;
+}
+/* line 100, sass/modules/_header.scss */
+#navbar ul .menu-item-object-custom a {
+  font-family: "Libre Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-style: italic;
+  background: #00cae5;
+}
+/* line 106, sass/modules/_header.scss */
+#navbar ul .menu-item-object-custom a:hover {
+  background: #ff9d00;
 }
 
 /* line 1, sass/modules/_footer.scss */
 footer.site-footer {
-  background: #d7d7d7;
+  background: #e9e9e9;
 }
-/* line 3, sass/modules/_footer.scss */
+/* line 4, sass/modules/_footer.scss */
+footer.site-footer p {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+/* line 5, sass/modules/_footer.scss */
 footer.site-footer .contact {
-  background: #f1f1f1;
+  margin-top: 2rem;
+  background: #f7f7f7;
 }
-/* line 6, sass/modules/_footer.scss */
+/* line 9, sass/modules/_footer.scss */
 footer.site-footer .icon {
   background: #00cae5;
   padding: 1rem;
+}
+/* line 13, sass/modules/_footer.scss */
+footer.site-footer h2 {
+  font-family: "Patua One", Georgia, "Times New Roman", Times, serif;
+}
+/* line 16, sass/modules/_footer.scss */
+footer.site-footer h3 {
+  font-size: 12px;
+  font-size: 0.75rem;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* line 2, sass/pages/_home.scss */
@@ -10509,12 +10575,20 @@ body.home #projects ul li a:link, body.home #projects ul li a:visited {
   display: block;
   background: #ffffff;
 }
+/* line 17, sass/pages/_home.scss */
+body.home .mailinglist h2 {
+  text-align: left;
+}
 
-/* line 3, sass/pages/_contact.scss */
+/* line 1, sass/pages/_contact.scss */
+.socialmedia {
+  text-align: right;
+}
+/* line 4, sass/pages/_contact.scss */
 .socialmedia li {
   display: inline-block;
 }
-/* line 5, sass/pages/_contact.scss */
+/* line 6, sass/pages/_contact.scss */
 .socialmedia li a:link, .socialmedia li a:visited {
   background: #4a4f51;
   display: block;
@@ -10523,14 +10597,46 @@ body.home #projects ul li a:link, body.home #projects ul li a:visited {
   color: #ffffff;
   text-align: center;
 }
-/* line 12, sass/pages/_contact.scss */
+/* line 13, sass/pages/_contact.scss */
 .socialmedia li a:link .genericon, .socialmedia li a:visited .genericon {
   font-size: 32px;
   width: 50px;
   height: 50px;
   line-height: 50px;
 }
-/* line 19, sass/pages/_contact.scss */
+/* line 20, sass/pages/_contact.scss */
+.socialmedia li a:hover {
+  background: #ff9d00;
+}
+/* line 23, sass/pages/_contact.scss */
 .socialmedia li a:hover, .socialmedia li a:active {
   text-decoration: none;
+}
+
+/* line 28, sass/pages/_contact.scss */
+.map {
+  background-image: url("images/map.png");
+  background-size: cover;
+}
+/* line 31, sass/pages/_contact.scss */
+.map .contact {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+/* line 36, sass/pages/_contact.scss */
+.map .icon {
+  background-color: #00cae5;
+}
+
+/* line 1, sass/pages/_projects.scss */
+.projects-header {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  font-size: 1rem;
+}
+/* line 2, sass/pages/_projects.scss */
+.projects-header a:link, .projects-header a:visited {
+  color: #8ce500;
 }

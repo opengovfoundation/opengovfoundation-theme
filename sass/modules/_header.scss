@@ -1,6 +1,5 @@
 
 h1 {
-    @include font-size(80px);
     &.border {border-bottom: 0.875rem solid $white;}
 }
 
@@ -9,7 +8,8 @@ body header#masthead {
 
   div.home-head-block { display: none; }
   h1 {
-    @include font-size(96px);
+    @include font-size(90px);
+    line-height:1;
   }
 }
 
@@ -37,12 +37,12 @@ header {
   } // button.menu-toggle
 
   .skip-link {
-    visibility: hidden;
+    display: none;
   } // .skip-link
 
   h2 {
     font-family: $main-font;
-    @include font-size(22px);
+    @include font-size(24px);
   } // h2
 
   a {
@@ -62,12 +62,20 @@ header {
 
 } // header
 
+.home-link {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  padding:.75rem 15px;
+}
+
 #navbar {
   background-color: rgba(0,0,0,0.4);
   position: absolute;
     top: 0;
     left: 0;
   width: 100%;
+  border: 0!important;
   @include breakpoint($screen-md-min) {
     text-align:right;
   }
@@ -77,13 +85,27 @@ header {
     li {
       @extend %clearfix;
       display: inline-block;
-      padding: 1rem;
-      text-align: center;
-      text-transform: uppercase;
-
       a {
-        @include font-size(18px);
+        @include font-size(16px);
+        display:block;
+        padding: 1.5rem 2rem .5rem 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom:1rem solid rgba(0,0,0,0);
+        &:hover {
+          border-bottom:1rem solid $orange;
+        }
       } // a
     } // li
+    .menu-item-object-custom a {
+      font-family:$fancy-font;
+      text-transform: capitalize;
+      letter-spacing:1px;
+      font-style: italic;
+      background:$blue;
+      &:hover {
+        background:$orange;
+      }
+    }
   } // ul
 } // #navbar

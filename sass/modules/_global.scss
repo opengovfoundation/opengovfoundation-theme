@@ -17,17 +17,22 @@ html {
 }
 
 body {
-  @include container(100%);
-  background-image: url("images/short_header_bkgnd@2x.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  padding: 0 3rem;
+    @include container(100%);
+    background-image: url("images/short_header_bkgnd@2x.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding: 0 3rem;
+    color:$dark-grey;
+}
+
+article {
+
 }
 
 h1 {
     font-size: 3.25rem;
-    line-height: 6rem;
+    line-height: 3.25rem;
     margin-top: 0;
     margin-bottom: 2rem;
     font-family:$accent-font;
@@ -70,8 +75,8 @@ h6 {
 p, ul, ol, pre, table, blockquote {
     margin-top: 0;
     margin-bottom: 2rem;
-    font-size:1.3rem;
-    line-height:1.5;
+    font-size:1rem;
+    line-height:1.2;
     &:last-child {
         margin-bottom: 0;
     }
@@ -112,6 +117,26 @@ dt, dd {
     background:$dark-grey;
     color:$white!important;
 }
+
+.thumbnail {
+    border-radius:0;
+    padding:1.5rem;
+    background:darken($white,3%);
+    border:none;
+    h2 {
+        font-family: $accent-font;
+        line-height:1;
+        color:$dark-grey;
+        text-align:center;
+        padding-bottom:.5rem;
+        border-bottom: 8px solid $dark-grey;
+        margin:.5rem 0 1rem 0;
+    }
+    p {
+        @include font-size(16px);
+    }
+}
+
 
 /* Debugging */
 

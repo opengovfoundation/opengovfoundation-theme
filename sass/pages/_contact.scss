@@ -1,4 +1,5 @@
 .socialmedia {
+	text-align:right;
 	@extend %list-in-disguise;
 	li {
 		display:inline-block;
@@ -16,8 +17,23 @@
 				line-height:50px;
 			}
 		}
+		a:hover {
+			background:$orange;
+		}
 		a:hover, a:active {
 			text-decoration:none;
 		}
+	}
+}
+.map {
+	background-image:url("images/map.png");
+	background-size:cover;
+	.contact {
+		background-color:$white;
+		padding:1rem;
+		margin-bottom:2rem;
+	}
+	.icon {
+		background-color:$blue;
 	}
 }
