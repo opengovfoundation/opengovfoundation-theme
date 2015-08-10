@@ -10493,32 +10493,39 @@ header a:hover, header a:active {
   left: 0;
   width: 100%;
   border: 0 !important;
+  text-align: center;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   /* line 72, sass/modules/_header.scss */
   #navbar {
     text-align: right;
   }
 }
-/* line 85, sass/modules/_header.scss */
+/* line 86, sass/modules/_header.scss */
 #navbar ul li {
   display: inline-block;
 }
-/* line 88, sass/modules/_header.scss */
+/* line 89, sass/modules/_header.scss */
 #navbar ul li a {
   font-size: 16px;
   font-size: 1rem;
   display: block;
-  padding: 1.5rem 2rem .5rem 2rem;
   text-align: center;
   text-transform: uppercase;
   border-bottom: 1rem solid transparent;
+  padding: 1.5rem 1rem .5rem 1rem;
 }
-/* line 95, sass/modules/_header.scss */
+@media (min-width: 992px) {
+  /* line 89, sass/modules/_header.scss */
+  #navbar ul li a {
+    padding: 1.5rem 2rem .5rem 2rem;
+  }
+}
+/* line 99, sass/modules/_header.scss */
 #navbar ul li a:hover {
   border-bottom: 1rem solid #ff9d00;
 }
-/* line 100, sass/modules/_header.scss */
+/* line 104, sass/modules/_header.scss */
 #navbar ul .menu-item-object-custom a {
   font-family: "Libre Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
   text-transform: capitalize;
@@ -10526,7 +10533,7 @@ header a:hover, header a:active {
   font-style: italic;
   background: #00cae5;
 }
-/* line 106, sass/modules/_header.scss */
+/* line 110, sass/modules/_header.scss */
 #navbar ul .menu-item-object-custom a:hover {
   background: #ff9d00;
 }

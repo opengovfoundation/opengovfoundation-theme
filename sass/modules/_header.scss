@@ -76,7 +76,8 @@ header {
     left: 0;
   width: 100%;
   border: 0!important;
-  @include breakpoint($screen-md-min) {
+  text-align:center;
+  @include breakpoint($screen-sm-min) {
     text-align:right;
   }
   ul {
@@ -88,10 +89,13 @@ header {
       a {
         @include font-size(16px);
         display:block;
-        padding: 1.5rem 2rem .5rem 2rem;
         text-align: center;
         text-transform: uppercase;
         border-bottom:1rem solid rgba(0,0,0,0);
+        padding: 1.5rem 1rem .5rem 1rem;
+        @include breakpoint($screen-md-min) {
+          padding: 1.5rem 2rem .5rem 2rem;
+        }
         &:hover {
           border-bottom:1rem solid $orange;
         }

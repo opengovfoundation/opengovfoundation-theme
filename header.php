@@ -42,10 +42,10 @@
 				<div id="navbar" class="navbar">
 					<div class="container">
 						<div class="row">
-							<a class="home-link col-md-3" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+							<a class="home-link col-md-3 col-sm-2" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 								<img src="<?php echo get_bloginfo('template_directory');?>/images/opengov_logo@2x.png" width="215" alt="OpenGov Foundation Logo" class="opengov_logo">
 							</a>
-							<nav id="site-navigation" class="navigation main-navigation col-md-9" role="navigation">
+							<nav id="site-navigation" class="navigation main-navigation col-md-9 col-sm-10" role="navigation">
 								<button class="menu-toggle"><?php _e( 'Menu', 'opengovfoundation' ); ?></button>
 								<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'opengovfoundation' ); ?>"><?php _e( 'Skip to content', 'opengovfoundation' ); ?></a>
 								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
