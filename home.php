@@ -52,33 +52,17 @@ get_header(); ?>
 		<div class="row padded-row invert">
 			<div class="container">
 				<h1>Projects</h1>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_flf.png" alt="">
-						<div class="caption">
-							<h2>Free Law Founders</h2>
-							<p>A nation-wide, collaborative effort open to all people who want to improve how laws and legislation are produced and presented to citizens of American states and cities.</p>
+		    	<?php query_posts(array('showposts' => 3, 'post_parent' => 2638,2616, 'post_type' => 'page')); while (have_posts()) { the_post(); ?>
+					<div class="col-md-4">
+						<div class="thumbnail">
+							<?php the_post_thumbnail(); ?>
+							<div class="caption">
+								<h2><?php the_title(); ?></h2>
+								<p><?php the_excerpt(); ?></p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_madison.png" alt="">
-						<div class="caption">
-							<h2>Madison Project</h2>
-							<p>A nation-wide, collaborative effort open to all people who want to improve how laws and legislation are produced and presented to citizens of American states and cities.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_decoded.png" alt="">
-						<div class="caption">
-							<h2>America Decoded</h2>
-							<p>A nation-wide, collaborative effort open to all people who want to improve how laws and legislation are produced and presented to citizens of American states and cities.</p>
-						</div>
-					</div>
-				</div>
+		        <?php } ?>
 			</div>
 		</div>
 		<div class="container">
