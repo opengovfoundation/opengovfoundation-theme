@@ -10,6 +10,9 @@ get_header(); ?>
 
 	<div id="primary" class="container content-area">
 		<div class="row padded-row">
+			<h1 class="col-md-12 entry-title">Projects</h1>
+		</div>
+		<div class="row">
 		<?php $this_page_id=$wp_query->post->ID; ?>
     	<?php query_posts(array('showposts' => 20, 'post_parent' => $this_page_id, 'post_type' => 'page')); while (have_posts()) { the_post(); ?>
 			<div class="col-md-4">

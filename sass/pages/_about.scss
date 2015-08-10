@@ -30,7 +30,7 @@
 	padding:1rem 2rem 2rem 2rem;
 	border-radius:0;
 	text-align: center;
-	@include breakpoint($screen-sm-min) {
+	@include breakpoint($screen-md-min) {
 		text-align:left;
 	}
 	img {
