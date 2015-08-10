@@ -1,0 +1,46 @@
+.modal-content, .person {
+	h1, h2, .title {
+		color: $dark-grey!important;
+	}
+	h2 {
+		margin-bottom: 0;
+		border-bottom:0;
+	}
+	.title {
+		@include font-size(18px);
+		font-weight:bold;
+		border-top: 5px solid $dark-grey;
+		border-bottom:1px solid $dark-grey;
+		padding-bottom:.5rem;
+		padding-top:.25rem;
+		margin-top:.25rem;
+		margin-bottom:1rem;
+		text-align:center;
+	}
+}
+.person {
+	.bio {display:none;}
+	a:link, a:visited {
+		color:$dark-grey;
+		text-align:center;
+		display:block;
+	}
+}
+.modal-content {
+	padding:1rem 2rem 2rem 2rem;
+	border-radius:0;
+	text-align: center;
+	@include breakpoint($screen-sm-min) {
+		text-align:left;
+	}
+	img {
+		margin-bottom: .25rem;
+	}
+	h1 {
+		margin-bottom: 0;
+	}
+	p {
+		text-align:left;
+		line-height:1.5;
+	}
+}

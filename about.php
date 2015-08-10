@@ -40,168 +40,81 @@ get_header(); ?>
 						<?php get_template_part('get-involved'); ?>
 					</div>
 				</div>
-				<?php comments_template(); ?>
 			<?php endwhile; ?>
+		<?php 
+		$this_page_id=$wp_query->post->ID;  
+		query_posts(array('showposts' => 20, 'post_parent' => $this_page_id, 'post_type' => 'page'));
+		if ( have_posts() ) {
+		    while ( have_posts() ) {
+		        the_post();
+		        echo "<div class='row padded-row'>";
+		        echo "<h1 class='col-md-12'>".get_the_title()."</h1>";
 
+		        $args=array(
+		                'orderby' => 'menu_order',
+		                'order' => 'ASC',
+		                'posts_per_page' => 50,
+		                'post_type' => get_post_type( $post->ID ),
+		                'post_parent' => $post->ID
+		        );
+
+		        $childpages = new WP_Query($args);
+
+		        if($childpages->post_count > 0) { /* display the children content  */
+		            while ($childpages->have_posts()) {
+		                 $childpages->the_post();?>
+		                <div class="col-md-4">
+							<div class="thumbnail person">
+								<?php the_post_thumbnail(array( 'class' => ' img-circle' )); ?>
+								<div class="caption">
+									<h2><?php echo get_the_title() ?></h2>
+									<p class="title"><?php $key="Title"; echo get_post_meta($post->ID, $key, true); ?></p>
+									<div class="bio"><?php the_content(); ?></div>
+									<a href="#" data-toggle="modal" data-target="#exampleModal" data-img='<?php the_post_thumbnail(array( 'class' => ' img-circle' )); ?>'>See details</a>
+								</div>
+							</div>
+						</div>
+		            <?}
+		        }
+		    echo "</div>";
+		    }
+		}
+		 ?>
+			<!-- BOOTSTRAP MODAL -->
+			<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+					<div class="row">
+						<div class="image col-md-4"></div>
+						<h1 class="name col-md-8"></h1>
+					</div>
+					<h2 class="title"></h2>
+			    	<p class="bio"></p>
+			    </div>
+			  </div>
+			</div>
+			<!-- END BOOTSTRAP MODAL -->
 		</div><!-- #content -->
-		<div class="row padded-row invert">
-			<div class="container">
-				<h1>Team</h1>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-    	<img src="" alt="" class="img-circle">
-		<h1 class="title">Seamus Kraft</h1>
-		<h2>Executive Director, Co-Founder & Vice-Chairman of the Board</h2>
-    	<p>Bio</p>
-    </div>
-  </div>
-</div>
-
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_flf.png" alt="">
-						<div class="caption">
-							<h2>Seamus Kraft</h2>
-							<p>Executive Director, Co-Founder & Vice-Chairman of the Board</p>
-							<a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">See details</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_flf.png" alt="">
-						<div class="caption">
-							<h2>Seamus Kraft</h2>
-							<p>Executive Director, Co-Founder & Vice-Chairman of the Board</p>
-							<a href="#">See details</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_flf.png" alt="">
-						<div class="caption">
-							<h2>Seamus Kraft</h2>
-							<p>Executive Director, Co-Founder & Vice-Chairman of the Board</p>
-							<a href="#">See details</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_flf.png" alt="">
-						<div class="caption">
-							<h2>Seamus Kraft</h2>
-							<p>Executive Director, Co-Founder & Vice-Chairman of the Board</p>
-							<a href="#">See details</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row padded-row">
-				<h1>Board Members</h1>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_flf.png" alt="">
-						<div class="caption">
-							<h2>Seamus Kraft</h2>
-							<p>Executive Director, Co-Founder & Vice-Chairman of the Board</p>
-							<a href="#">See details</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_flf.png" alt="">
-						<div class="caption">
-							<h2>Seamus Kraft</h2>
-							<p>Executive Director, Co-Founder & Vice-Chairman of the Board</p>
-							<a href="#">See details</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_flf.png" alt="">
-						<div class="caption">
-							<h2>Seamus Kraft</h2>
-							<p>Executive Director, Co-Founder & Vice-Chairman of the Board</p>
-							<a href="#">See details</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_flf.png" alt="">
-						<div class="caption">
-							<h2>Seamus Kraft</h2>
-							<p>Executive Director, Co-Founder & Vice-Chairman of the Board</p>
-							<a href="#">See details</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row padded-row invert">
-			<div class="container">
-				<h1>Advisory Board</h1>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_flf.png" alt="">
-						<div class="caption">
-							<h2>Seamus Kraft</h2>
-							<p>Executive Director, Co-Founder & Vice-Chairman of the Board</p>
-							<a href="#">See details</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_flf.png" alt="">
-						<div class="caption">
-							<h2>Seamus Kraft</h2>
-							<p>Executive Director, Co-Founder & Vice-Chairman of the Board</p>
-							<a href="#">See details</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_flf.png" alt="">
-						<div class="caption">
-							<h2>Seamus Kraft</h2>
-							<p>Executive Director, Co-Founder & Vice-Chairman of the Board</p>
-							<a href="#">See details</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_flf.png" alt="">
-						<div class="caption">
-							<h2>Seamus Kraft</h2>
-							<p>Executive Director, Co-Founder & Vice-Chairman of the Board</p>
-							<a href="#">See details</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div><!-- #primary -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js"></script>
 	<script>
-	$('#exampleModal').on('show.bs.modal', function (event) {
-	  var button = $(event.relatedTarget) // Button that triggered the modal
-	  var recipient = button.data('whatever') // Extract info from data-* attributes
-	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-	  var modal = $(this)
-	  modal.find('.title').text('New message to ' + recipient)
-	})
+	$(function() {
+		$('#exampleModal').on('show.bs.modal', function (event) {
+		  var button = $(event.relatedTarget) // Button that triggered the modal
+		  var name = $(event.relatedTarget).parent().find("h2").text(); // Extract info from data-* attributes
+		  var title = $(event.relatedTarget).parent().find(".title").text(); // Extract info from data-* attributes
+		  var bio = $(event.relatedTarget).parent().find(".bio").text(); // Extract info from data-* attributes
+		  var image = $(event.relatedTarget).data("img"); // Extract info from data-* attributes
+		  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+		  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+		  var modal = $(this)
+		  modal.find('.name').text(name);
+		  modal.find('.title').text(title);
+		  modal.find('.bio').text(bio);
+		  modal.find('.image').html(image);
+		});
+	});
 	</script>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
