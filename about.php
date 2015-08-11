@@ -74,7 +74,7 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-		            <?}
+		            <?php }
 		        }
 		    echo "</div>";
 		    }
