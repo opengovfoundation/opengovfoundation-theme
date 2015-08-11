@@ -39,7 +39,12 @@ get_header(); ?>
 							<img src="/wp-content/themes/opengovfoundation-theme/images/icon_newspaper.png" alt="">
 							<div class="caption">
 								<h2>New on the&nbsp;Blog</h2>
-								<p>A nation-wide, collaborative effort open to all people who want to improve how laws and legislation are produced and presented to citizens of American states and cities.</p>
+								<?php
+									$recent_posts = wp_get_recent_posts(array( 'numberposts' => '1'));
+									foreach( $recent_posts as $recent ){
+										echo '<p><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </p> ';
+									}
+								?>
 							</div>
 						</div>
 					</div>
@@ -49,9 +54,9 @@ get_header(); ?>
 			<?php endwhile; ?>
 
 		</div><!-- #content -->
-		<div class="row padded-row invert">
+		<div class="padded-row invert">
 			<div class="container">
-				<h1>Projects</h1>
+				<h1 class="col-md-12">Projects</h1>
 		    	<?php query_posts(array('showposts' => 3, 'post_parent' => 2638,2616, 'post_type' => 'page')); while (have_posts()) { the_post(); ?>
 					<div class="col-md-4">
 						<div class="thumbnail">
