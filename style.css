@@ -10553,6 +10553,7 @@ header a:hover, header a:active {
 /* line 1, sass/modules/_footer.scss */
 footer.site-footer {
   background: #e9e9e9;
+  padding-bottom: 1rem;
 }
 /* line 4, sass/modules/_footer.scss */
 footer.site-footer p {
@@ -10561,19 +10562,28 @@ footer.site-footer p {
 }
 /* line 5, sass/modules/_footer.scss */
 footer.site-footer .contact {
-  margin-top: 2rem;
   background: #f7f7f7;
+  padding-bottom: 1rem;
 }
-/* line 9, sass/modules/_footer.scss */
+@media (min-width: 768px) {
+  /* line 5, sass/modules/_footer.scss */
+  footer.site-footer .contact {
+    margin-top: 2rem;
+  }
+}
+/* line 12, sass/modules/_footer.scss */
 footer.site-footer .icon {
+  display: inline-block;
   background: #00cae5;
   padding: 1rem;
+  margin-top: 1rem;
 }
-/* line 13, sass/modules/_footer.scss */
+/* line 18, sass/modules/_footer.scss */
 footer.site-footer h2 {
   font-family: "Patua One", Georgia, "Times New Roman", Times, serif;
+  margin-top: 1rem;
 }
-/* line 16, sass/modules/_footer.scss */
+/* line 22, sass/modules/_footer.scss */
 footer.site-footer h3 {
   font-size: 12px;
   font-size: 0.75rem;

@@ -14,8 +14,10 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="container">
 				<div class="row contact">
-					<div class="col-md-1 icon">
+					<div class="col-md-1">
+					<div class="icon">
 						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_contact_white.png" alt="">
+					</div>
 					</div>
 					<div class="col-md-3">
 						<h2>Contact OpenGov</h2>
@@ -32,7 +34,9 @@
 					</div>
 				</div>
 				<div class="row padded-row">
-					<p>&copy;2015 OpenGov Foundation. All Rights Reserved.</p>
+					<div class="col-sm-12">
+						<p>&copy;2015 OpenGov Foundation. All Rights Reserved.</p>
+					</div>
 				</div>
 			</div>
 		</footer><!-- #colophon -->

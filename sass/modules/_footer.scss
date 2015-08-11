@@ -1,17 +1,23 @@
 footer.site-footer {
 	background:lighten($light-grey,7%);
-
+	padding-bottom:1rem;
 	p { @include font-size(14px);}
 	.contact {
-		margin-top:2rem;
 		background:darken($white,3%);
+		padding-bottom:1rem;
+	    @include breakpoint($screen-sm-min) {
+			margin-top:2rem;
+		}
 	}
 	.icon {
+		display:inline-block;
 		background:$blue;
 		padding:1rem;
+		margin-top:1rem;
 	}
 	h2 {
 		font-family: $accent-font;
+		margin-top:1rem;
 	}
 	h3 {
 		@include font-size(12px);
