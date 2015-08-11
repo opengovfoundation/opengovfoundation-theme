@@ -10,7 +10,7 @@ get_header(); ?>
 
 	<div id="primary" class="container content-area">
 		<div class="row padded-row">
-			<h1 class="col-md-12 entry-title">Projects</h1>
+			<h1 class="col-md-12">Projects</h1>
 		</div>
 		<div class="row">
 		<?php $this_page_id=$wp_query->post->ID; ?>
