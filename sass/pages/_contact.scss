@@ -1,6 +1,9 @@
 .socialmedia {
-	text-align:right;
-	@extend %list-in-disguise;
+	text-align:left;
+    @include breakpoint($screen-sm-min) {
+    	text-align:right;
+	}
+	padding-bottom:1rem;
 	li {
 		display:inline-block;
 		a:link, a:visited {
@@ -26,14 +29,39 @@
 	}
 }
 .map {
-	background-image:url("images/map.png");
 	background-size:cover;
+	background-position:center;
+	min-height:400px;
+    margin-left:0;
+    margin-right:0;
+    @include breakpoint($screen-sm-min) {
+		background-image:url("images/map.jpg");
+	}
 	.contact {
 		background-color:$white;
 		padding:1rem;
 		margin-bottom:2rem;
+		&, p {@include font-size(14px);}
 	}
 	.icon {
 		background-color:$blue;
+		padding:1rem;
+	}
+	h3 {
+		@include font-size(14px);
+		margin:0;
+		text-transform:uppercase;
+		font-weight:bold;
+	
+	}
+	.inline {
+		display:inline-block!important;
+		margin:0 .5rem 0 0;
+	}
+	.mobile-map {
+		img {max-width:100%;}
+	    @include breakpoint($screen-sm-min) {
+	    	display:none;
+		}
 	}
 }
