@@ -16,23 +16,23 @@ get_header(); ?>
 	</div>
 	<?php $query = new WP_Query( 'cat=2,3,4,7,18,19' ); ?>
 	<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-		<div class="row">
+		<div class="row row-padded">
 			<div class="date col-md-2">
 				<!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
-				<small><?php the_time( 'F jS, Y' ); ?> by <?php the_author_posts_link(); ?></small>
+				<p><?php the_time( 'F jS, Y' ); ?></p>
 			</div>
 			<div class="post col-md-10">
 
-			<!-- Display the Title as a link to the Post's permalink. -->
-			<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+				<!-- Display the Title as a link to the Post's permalink. -->
+				<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
-			<div class="entry">
-			<?php the_content(); ?>
-			</div>
+				<div class="entry">
+				<?php the_content(); ?>
+				</div>
 
-			<p class="postmetadata"><?php _e( 'Posted in' ); ?> <?php the_category( ', ' ); ?></p>
 			</div> <!-- closes the first div box -->
 		</div>
+		<hr>
 	<?php endwhile; 
 	wp_reset_postdata();
 	else : ?>

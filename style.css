@@ -10401,8 +10401,13 @@ dt, dd {
   font-size: 1rem;
 }
 
+/* line 140, sass/modules/_global.scss */
+img {
+  max-width: 100%;
+}
+
 /* Debugging */
-/* line 143, sass/modules/_global.scss */
+/* line 147, sass/modules/_global.scss */
 .TYPE-DEBUG {
   position: absolute;
   top: 0;
@@ -10758,4 +10763,14 @@ body.home .mailinglist h2 {
 .modal-content p {
   text-align: left;
   line-height: 1.5;
+}
+
+/* line 1, sass/pages/_news.scss */
+.post h1 {
+  font-size: 2.5rem;
+  line-height: 1.25;
+}
+/* line 4, sass/pages/_news.scss */
+.post h1 a {
+  color: #4a4f51;
 }
