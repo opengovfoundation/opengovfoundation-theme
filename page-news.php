@@ -14,8 +14,7 @@ get_header(); ?>
 	<div class="row padded-row">
 		<h1 class="col-md-12">News</h1>
 	</div>
-	<?php $query = new WP_Query( 'cat=2,3,4' ); ?>
-	
+	<?php $query = new WP_Query( 'cat=2,3,4,7,18,19' ); ?>
 	<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 		<div class="row">
 			<div class="date col-md-2">
