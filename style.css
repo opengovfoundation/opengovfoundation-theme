@@ -10216,12 +10216,12 @@ hr {
 }
 
 /* line 91, sass/extends/_non-semantic-helpers.scss */
-#navbar ul, body.home #projects ul, .socialmedia {
+#navbar ul, body.home #projects ul {
   margin: 0;
   padding: 0;
 }
 /* line 95, sass/extends/_non-semantic-helpers.scss */
-#navbar ul li, body.home #projects ul li, .socialmedia li {
+#navbar ul li, body.home #projects ul li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -10369,7 +10369,7 @@ dt, dd {
 /* Helpers */
 /* line 112, sass/modules/_global.scss */
 .padded-row {
-  padding-top: 4rem;
+  padding-top: 2rem;
 }
 
 /* line 116, sass/modules/_global.scss */
@@ -10402,7 +10402,7 @@ dt, dd {
 }
 
 /* Debugging */
-/* line 144, sass/modules/_global.scss */
+/* line 143, sass/modules/_global.scss */
 .TYPE-DEBUG {
   position: absolute;
   top: 0;
@@ -10430,59 +10430,61 @@ body header#masthead {
 body header#masthead div.home-head-block {
   display: none;
 }
-/* line 14, sass/modules/_header.scss */
-body header#masthead h1 {
-  font-size: 90px;
-  font-size: 5.625rem;
-  line-height: 1;
+@media (min-width: 768px) {
+  /* line 14, sass/modules/_header.scss */
+  body header#masthead h1 {
+    font-size: 90px;
+    font-size: 5.625rem;
+    line-height: 1;
+  }
 }
 
-/* line 20, sass/modules/_header.scss */
+/* line 22, sass/modules/_header.scss */
 body.home header#masthead {
   min-height: 50rem;
   padding: 20rem 0 0 0;
 }
-/* line 24, sass/modules/_header.scss */
+/* line 26, sass/modules/_header.scss */
 body.home header#masthead div.home-head-block {
   display: block;
 }
 
-/* line 29, sass/modules/_header.scss */
+/* line 31, sass/modules/_header.scss */
 header {
   color: #4a4f51;
   margin: 0;
   padding: 0;
   position: relative;
 }
-/* line 35, sass/modules/_header.scss */
+/* line 37, sass/modules/_header.scss */
 header#masthead {
   color: #ffffff;
 }
-/* line 39, sass/modules/_header.scss */
+/* line 41, sass/modules/_header.scss */
 header button.menu-toggle {
   display: none;
 }
-/* line 43, sass/modules/_header.scss */
+/* line 45, sass/modules/_header.scss */
 header .skip-link {
   display: none;
 }
-/* line 47, sass/modules/_header.scss */
+/* line 49, sass/modules/_header.scss */
 header h2 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-size: 1.5rem;
 }
-/* line 54, sass/modules/_header.scss */
+/* line 56, sass/modules/_header.scss */
 header a:link, header a:visited {
   color: #ffffff;
 }
-/* line 59, sass/modules/_header.scss */
+/* line 61, sass/modules/_header.scss */
 header a:hover, header a:active {
   color: #ffffff;
   text-decoration: none;
 }
 
-/* line 69, sass/modules/_header.scss */
+/* line 71, sass/modules/_header.scss */
 .home-link {
   display: inline-block;
   text-align: left;
@@ -10490,7 +10492,7 @@ header a:hover, header a:active {
   padding: .75rem 15px;
 }
 
-/* line 76, sass/modules/_header.scss */
+/* line 78, sass/modules/_header.scss */
 #navbar {
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -10501,16 +10503,16 @@ header a:hover, header a:active {
   text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 76, sass/modules/_header.scss */
+  /* line 78, sass/modules/_header.scss */
   #navbar {
     text-align: right;
   }
 }
-/* line 90, sass/modules/_header.scss */
+/* line 92, sass/modules/_header.scss */
 #navbar ul li {
   display: inline-block;
 }
-/* line 93, sass/modules/_header.scss */
+/* line 95, sass/modules/_header.scss */
 #navbar ul li a {
   font-size: 16px;
   font-size: 1rem;
@@ -10521,16 +10523,16 @@ header a:hover, header a:active {
   padding: 1.5rem 1rem .5rem 1rem;
 }
 @media (min-width: 992px) {
-  /* line 93, sass/modules/_header.scss */
+  /* line 95, sass/modules/_header.scss */
   #navbar ul li a {
     padding: 1.5rem 2rem .5rem 2rem;
   }
 }
-/* line 103, sass/modules/_header.scss */
+/* line 105, sass/modules/_header.scss */
 #navbar ul li a:hover {
   border-bottom: 1rem solid #ff9d00;
 }
-/* line 108, sass/modules/_header.scss */
+/* line 110, sass/modules/_header.scss */
 #navbar ul .menu-item-object-custom a {
   font-family: "Libre Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
   text-transform: capitalize;
@@ -10538,7 +10540,7 @@ header a:hover, header a:active {
   font-style: italic;
   background: #00cae5;
 }
-/* line 114, sass/modules/_header.scss */
+/* line 116, sass/modules/_header.scss */
 #navbar ul .menu-item-object-custom a:hover {
   background: #ff9d00;
 }
@@ -10594,13 +10596,20 @@ body.home .mailinglist h2 {
 
 /* line 1, sass/pages/_contact.scss */
 .socialmedia {
-  text-align: right;
+  text-align: left;
+  padding-bottom: 1rem;
 }
-/* line 4, sass/pages/_contact.scss */
+@media (min-width: 768px) {
+  /* line 1, sass/pages/_contact.scss */
+  .socialmedia {
+    text-align: right;
+  }
+}
+/* line 7, sass/pages/_contact.scss */
 .socialmedia li {
   display: inline-block;
 }
-/* line 6, sass/pages/_contact.scss */
+/* line 9, sass/pages/_contact.scss */
 .socialmedia li a:link, .socialmedia li a:visited {
   background: #4a4f51;
   display: block;
@@ -10609,36 +10618,74 @@ body.home .mailinglist h2 {
   color: #ffffff;
   text-align: center;
 }
-/* line 13, sass/pages/_contact.scss */
+/* line 16, sass/pages/_contact.scss */
 .socialmedia li a:link .genericon, .socialmedia li a:visited .genericon {
   font-size: 32px;
   width: 50px;
   height: 50px;
   line-height: 50px;
 }
-/* line 20, sass/pages/_contact.scss */
+/* line 23, sass/pages/_contact.scss */
 .socialmedia li a:hover {
   background: #ff9d00;
 }
-/* line 23, sass/pages/_contact.scss */
+/* line 26, sass/pages/_contact.scss */
 .socialmedia li a:hover, .socialmedia li a:active {
   text-decoration: none;
 }
 
-/* line 28, sass/pages/_contact.scss */
-.map {
-  background-image: url("images/map.png");
-  background-size: cover;
-}
 /* line 31, sass/pages/_contact.scss */
+.map {
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  /* line 31, sass/pages/_contact.scss */
+  .map {
+    background-image: url("images/map.jpg");
+  }
+}
+/* line 40, sass/pages/_contact.scss */
 .map .contact {
   background-color: #ffffff;
   padding: 1rem;
   margin-bottom: 2rem;
 }
-/* line 36, sass/pages/_contact.scss */
+/* line 44, sass/pages/_contact.scss */
+.map .contact, .map .contact p {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+/* line 46, sass/pages/_contact.scss */
 .map .icon {
   background-color: #00cae5;
+  padding: 1rem;
+}
+/* line 50, sass/pages/_contact.scss */
+.map h3 {
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 57, sass/pages/_contact.scss */
+.map .inline {
+  display: inline-block !important;
+  margin: 0 .5rem 0 0;
+}
+/* line 62, sass/pages/_contact.scss */
+.map .mobile-map img {
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  /* line 61, sass/pages/_contact.scss */
+  .map .mobile-map {
+    display: none;
+  }
 }
 
 /* line 1, sass/pages/_projects.scss */

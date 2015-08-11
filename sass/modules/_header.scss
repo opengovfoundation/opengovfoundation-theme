@@ -12,8 +12,10 @@ body header#masthead {
 
   div.home-head-block { display: none; }
   h1 {
-    @include font-size(90px);
-    line-height:1;
+    @include breakpoint($screen-sm-min) {
+      @include font-size(90px);
+      line-height:1;
+    }
   }
 }
 
