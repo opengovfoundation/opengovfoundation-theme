@@ -10,18 +10,25 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area container">
-		<div id="content" class="site-content col-md-8" role="main">
+		<div class="row padded-row">
+			<div id="content" class="site-content col-md-8" role="main">
 
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+				<?php /* The loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', get_post_format() ); ?>
-				<?php opengovfoundation_post_nav(); ?>
-				<?php comments_template(); ?>
+					<?php get_template_part( 'content', get_post_format() ); ?>
+					<div class="well">
+						<?php opengovfoundation_post_nav(); ?>
+					</div>
+					<?php comments_template(); ?>
 
-			<?php endwhile; ?>
+				<?php endwhile; ?>
 
-		</div><!-- #content -->
+			</div><!-- #content -->
+			<div class="col-md-4">
+				<?php get_template_part('get-involved'); ?>
+			</div>
+		</div>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
