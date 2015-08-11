@@ -65,12 +65,12 @@ get_header(); ?>
 		                 $childpages->the_post();?>
 		                <div class="col-md-4">
 							<div class="thumbnail person">
-								<?php the_post_thumbnail(array( 'class' => ' img-circle' )); ?>
+								<?php the_post_thumbnail('thumbnail', array( 'class' => ' img-circle' )) ?>
 								<div class="caption">
 									<h2><?php echo get_the_title() ?></h2>
 									<p class="title"><?php $key="Title"; echo get_post_meta($post->ID, $key, true); ?></p>
 									<div class="bio"><?php the_content(); ?></div>
-									<a href="#" data-toggle="modal" data-target="#exampleModal" data-img='<?php the_post_thumbnail(array( 'class' => ' img-circle' )); ?>'>See details</a>
+									<a href="#" data-toggle="modal" data-target="#exampleModal" data-img='<?php the_post_thumbnail('thumbnail', array( 'class' => ' img-circle' )) ?>'>See details</a>
 								</div>
 							</div>
 						</div>
