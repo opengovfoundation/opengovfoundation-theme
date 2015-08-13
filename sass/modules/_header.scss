@@ -102,10 +102,10 @@ header {
         @include breakpoint($screen-md-min) {
           padding: 1.5rem 2rem .5rem 2rem;
         }
-        &:hover {
-          border-bottom:1rem solid $orange;
-        }
       } // a
+      &.current-menu-item a, &.current-page-ancestor a, a:hover {
+        border-bottom:1rem solid $orange;
+      }
     } // li
     .menu-item-object-custom a {
       font-family:$fancy-font;

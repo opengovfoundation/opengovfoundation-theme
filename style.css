@@ -10533,8 +10533,8 @@ header a:hover, header a:active {
     padding: 1.5rem 2rem .5rem 2rem;
   }
 }
-/* line 105, sass/modules/_header.scss */
-#navbar ul li a:hover {
+/* line 106, sass/modules/_header.scss */
+#navbar ul li.current-menu-item a, #navbar ul li.current-page-ancestor a, #navbar ul li a:hover {
   border-bottom: 1rem solid #ff9d00;
 }
 /* line 110, sass/modules/_header.scss */
