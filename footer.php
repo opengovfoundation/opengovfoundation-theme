@@ -30,7 +30,7 @@
 					</div>
 					<div class="col-md-4">
 						<h3>Email:</h3>
-						<p><a href="#">sayhello@opengovfoundation.org</a></p>
+						<p><a href="mailto:sayhello@opengovfoundation.org">sayhello@opengovfoundation.org</a></p>
 					</div>
 				</div>
 				<div class="row padded-row">
