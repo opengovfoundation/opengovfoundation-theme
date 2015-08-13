@@ -14,7 +14,10 @@ get_header(); ?>
 	<div class="row padded-row">
 		<h1 class="col-md-12">News</h1>
 	</div>
-	<?php $query = new WP_Query( 'cat=2,3,4,7,18,19' ); ?>
+	<?php
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		$query = new WP_Query( 'cat=2,3,4,7,18,19&paged=' . $paged );
+	?>
 	<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 		<div class="row row-padded">
 			<div class="date col-md-2">
@@ -39,7 +42,9 @@ get_header(); ?>
 			</div> <!-- closes the first div box -->
 		</div>
 		<hr>
-	<?php endwhile; 
+	<?php endwhile;
+		<?php next_posts_link('&laquo; Older Entries') ?>
+		<?php previous_posts_link('Newer Entries &raquo;') ?>
 	wp_reset_postdata();
 	else : ?>
 
