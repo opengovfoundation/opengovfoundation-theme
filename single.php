@@ -20,7 +20,6 @@ get_header(); ?>
 					<div class="well">
 						<?php opengovfoundation_post_nav(); ?>
 					</div>
-					<?php comments_template(); ?>
 
 				<?php endwhile; ?>
 

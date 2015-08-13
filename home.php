@@ -50,7 +50,6 @@ get_header(); ?>
 					</div>
 				</article><!-- #post -->
 
-				<?php comments_template(); ?>
 			<?php endwhile; ?>
 
 		</div><!-- #content -->
