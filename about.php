@@ -97,7 +97,7 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
 	<script>
 	$(function() {
 		$('#exampleModal').on('show.bs.modal', function (event) {
