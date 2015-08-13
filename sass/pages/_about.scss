@@ -20,6 +20,9 @@
 }
 .person {
 	.bio {display:none;}
+	@include breakpoint($screen-md-min) {
+		min-height:365px;
+	}
 	a:link, a:visited {
 		color:$dark-grey;
 		text-align:center;

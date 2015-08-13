@@ -10742,34 +10742,40 @@ body.home .mailinglist h2 {
 .person .bio {
   display: none;
 }
-/* line 23, sass/pages/_about.scss */
+@media (min-width: 992px) {
+  /* line 21, sass/pages/_about.scss */
+  .person {
+    min-height: 365px;
+  }
+}
+/* line 26, sass/pages/_about.scss */
 .person a:link, .person a:visited {
   color: #4a4f51;
   text-align: center;
   display: block;
 }
 
-/* line 29, sass/pages/_about.scss */
+/* line 32, sass/pages/_about.scss */
 .modal-content {
   padding: 1rem 2rem 2rem 2rem;
   border-radius: 0;
   text-align: center;
 }
 @media (min-width: 992px) {
-  /* line 29, sass/pages/_about.scss */
+  /* line 32, sass/pages/_about.scss */
   .modal-content {
     text-align: left;
   }
 }
-/* line 36, sass/pages/_about.scss */
+/* line 39, sass/pages/_about.scss */
 .modal-content img {
   margin-bottom: .25rem;
 }
-/* line 39, sass/pages/_about.scss */
+/* line 42, sass/pages/_about.scss */
 .modal-content h1 {
   margin-bottom: 0;
 }
-/* line 42, sass/pages/_about.scss */
+/* line 45, sass/pages/_about.scss */
 .modal-content p {
   text-align: left;
   line-height: 1.5;
