@@ -550,3 +550,11 @@ function opengovfoundation_customize_preview_js() {
 	wp_enqueue_script( 'opengovfoundation-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20141120', true );
 }
 add_action( 'customize_preview_init', 'opengovfoundation_customize_preview_js' );
+
+/**
+ * Add excerpts for pages.
+ */
+add_action( 'init', 'opengovfoundation_add_excerpts_to_pages' );
+function opengovfoundation_add_excerpts_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
+}
