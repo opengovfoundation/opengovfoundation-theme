@@ -113,7 +113,7 @@ get_header(); ?>
 		  var modal = $(this)
 		  modal.find('.name').text(name);
 		  modal.find('.title').text(title);
-		  modal.find('.bio').text(bio);
+		  modal.find('.bio').html(bio);
 		  modal.find('.image').html(image);
 		});
 	});
