@@ -22,9 +22,15 @@ get_header(); ?>
 				<p><?php the_time( 'F jS, Y' ); ?></p>
 			</div>
 			<div class="post col-md-10">
+				<?php
+					$link = get_post_meta($post->ID, '_custom_news_source_url', true);
+					if(!$link) {
+						$link = get_the_permalink();
+					}
+				?>
 
 				<!-- Display the Title as a link to the Post's permalink. -->
-				<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+				<h1><a href="<?php echo $link; ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
 				<div class="entry">
 				<?php the_content(); ?>
