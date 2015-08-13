@@ -14,15 +14,15 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="container">
 				<div class="row contact">
-					<div class="col-md-1">
-					<div class="icon">
-						<img src="/wp-content/themes/opengovfoundation-theme/images/icon_contact_white.png" alt="">
-					</div>
+					<div class="col-md-2 nospace">
+						<div class="icon">
+							<img src="/wp-content/themes/opengovfoundation-theme/images/icon_contact_white.png" alt="">
+						</div>
 					</div>
 					<div class="col-md-3">
 						<h2>Contact OpenGov</h2>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-3">
 						<h3>Physical:</h3>
 						<p>1875 Connecticut Ave NW<br>
 						10th Floor<br>

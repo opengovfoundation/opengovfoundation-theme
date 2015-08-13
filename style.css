@@ -10571,20 +10571,38 @@ footer.site-footer .contact {
     margin-top: 2rem;
   }
 }
-/* line 12, sass/modules/_footer.scss */
+@media (min-width: 992px) {
+  /* line 5, sass/modules/_footer.scss */
+  footer.site-footer .contact {
+    padding-bottom: 0;
+  }
+}
+/* line 15, sass/modules/_footer.scss */
+footer.site-footer .nospace {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 19, sass/modules/_footer.scss */
 footer.site-footer .icon {
+  width: 100%;
   display: inline-block;
   background: #00cae5;
-  padding: 1rem;
-  margin-top: 1rem;
+  padding: .5rem;
 }
-/* line 18, sass/modules/_footer.scss */
+@media (min-width: 992px) {
+  /* line 19, sass/modules/_footer.scss */
+  footer.site-footer .icon {
+    padding: 1.7rem;
+    width: auto;
+  }
+}
+/* line 29, sass/modules/_footer.scss */
 footer.site-footer h2 {
   font-family: "Patua One", Georgia, "Times New Roman", Times, serif;
   margin-top: 1rem;
   line-height: 1;
 }
-/* line 23, sass/modules/_footer.scss */
+/* line 35, sass/modules/_footer.scss */
 footer.site-footer h3 {
   font-size: 12px;
   font-size: 0.75rem;
@@ -10592,6 +10610,12 @@ footer.site-footer h3 {
   padding: 0;
   font-weight: bold;
   text-transform: uppercase;
+}
+@media (min-width: 992px) {
+  /* line 35, sass/modules/_footer.scss */
+  footer.site-footer h3 {
+    margin-top: .75rem;
+  }
 }
 
 /* line 2, sass/pages/_home.scss */
