@@ -558,3 +558,40 @@ add_action( 'init', 'opengovfoundation_add_excerpts_to_pages' );
 function opengovfoundation_add_excerpts_to_pages() {
      add_post_type_support( 'page', 'excerpt' );
 }
+
+/**
+ * Add Redirect box.
+ */
+add_action('add_meta_boxes', 'add_news_url_box');
+add_action('save_post', 'save_news_url_box');
+
+function add_news_url_box(){
+        global $post;
+        if(has_category('News', $post)){
+                add_meta_box('news_url', 'Source URL', 'news_url_box', 'post', 'normal', 'high');
+        }
+
+}
+
+function news_url_box($post){
+        $value = get_post_meta($post->ID, '_custom_news_source_url', true);
+        ?>
+        <label for="news_source_url">URL: </label>
+        <input type="text" id="news_source_url" name="news_source_url" value="<?php echo esc_attr($value) ?>" />
+        <?php
+}
+
+function save_news_url_box($post_id){
+
+        if(!current_user_can('edit_post', $post_id)){
+                return;
+        }
+
+        if(!isset($_POST['news_source_url'])){
+                return;
+        }
+
+        $url = sanitize_text_field($_POST['news_source_url']);
+
+        update_post_meta($post_id, '_custom_news_source_url', $url);
+}
