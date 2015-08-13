@@ -43,7 +43,7 @@ get_header(); ?>
 		</div>
 		<hr>
 	<?php endwhile; ?>
-		<?php next_posts_link('&laquo; Older Entries') ?>
+		<?php next_posts_link('&laquo; Older Entries', $query->max_num_pages) ?>
 		<?php previous_posts_link('Newer Entries &raquo;') ?>
 	<?php wp_reset_postdata();
 	else : ?>
