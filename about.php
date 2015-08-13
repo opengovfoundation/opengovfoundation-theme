@@ -41,45 +41,47 @@ get_header(); ?>
 					</div>
 				</div>
 			<?php endwhile; ?>
-		<?php 
-		$this_page_id=$wp_query->post->ID;  
-		query_posts(array('showposts' => 20, 'post_parent' => $this_page_id, 'post_type' => 'page'));
-		if ( have_posts() ) {
-		    while ( have_posts() ) {
-		        the_post();
-		        echo "<div class='row padded-row'>";
-		        echo "<h1 class='col-md-12'>".get_the_title()."</h1>";
+		<div class="people">
+			<?php 
+			$this_page_id=$wp_query->post->ID;  
+			query_posts(array('showposts' => 20, 'orderby' => 'menu_order', 'order' => 'ASC', 'post_parent' => $this_page_id, 'post_type' => 'page'));
+			if ( have_posts() ) {
+			    while ( have_posts() ) {
+			        the_post();
+			        echo "<div class='row padded-row'>";
+			        echo "<h1 class='col-md-12'>".get_the_title()."</h1>";
 
-		        $args=array(
-		                'orderby' => 'menu_order',
-		                'order' => 'ASC',
-		                'posts_per_page' => 50,
-		                'post_type' => get_post_type( $post->ID ),
-		                'post_parent' => $post->ID
-		        );
+			        $args=array(
+			                'orderby' => 'menu_order',
+			                'order' => 'ASC',
+			                'posts_per_page' => 50,
+			                'post_type' => get_post_type( $post->ID ),
+			                'post_parent' => $post->ID
+			        );
 
-		        $childpages = new WP_Query($args);
+			        $childpages = new WP_Query($args);
 
-		        if($childpages->post_count > 0) { /* display the children content  */
-		            while ($childpages->have_posts()) {
-		                 $childpages->the_post();?>
-		                <div class="col-md-4">
-							<div class="thumbnail person">
-								<?php the_post_thumbnail('thumbnail', array( 'class' => ' img-circle' )) ?>
-								<div class="caption">
-									<h2><?php echo get_the_title() ?></h2>
-									<p class="title"><?php $key="Title"; echo get_post_meta($post->ID, $key, true); ?></p>
-									<div class="bio"><?php the_content(); ?></div>
-									<a href="#" data-toggle="modal" data-target="#exampleModal" data-img='<?php the_post_thumbnail('thumbnail', array( 'class' => ' img-circle' )) ?>'>See details</a>
+			        if($childpages->post_count > 0) { /* display the children content  */
+			            while ($childpages->have_posts()) {
+			                 $childpages->the_post();?>
+			                <div class="col-md-4">
+								<div class="thumbnail person">
+									<?php the_post_thumbnail('thumbnail', array( 'class' => ' img-circle' )) ?>
+									<div class="caption">
+										<h2><?php echo get_the_title() ?></h2>
+										<p class="title"><?php $key="Title"; echo get_post_meta($post->ID, $key, true); ?></p>
+										<div class="bio"><?php the_content(); ?></div>
+										<a href="#" data-toggle="modal" data-target="#exampleModal" data-img='<?php the_post_thumbnail('thumbnail', array( 'class' => ' img-circle' )) ?>'>See details</a>
+									</div>
 								</div>
 							</div>
-						</div>
-		            <?php }
-		        }
-		    echo "</div>";
-		    }
-		}
-		 ?>
+			            <?php }
+			        }
+			    echo "</div>";
+			    }
+			}
+			 ?>
+		 </div>
 			<!-- BOOTSTRAP MODAL -->
 			<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 			  <div class="modal-dialog" role="document">

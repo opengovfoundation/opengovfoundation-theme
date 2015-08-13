@@ -18,6 +18,10 @@
 		text-align:center;
 	}
 }
+.people .row:nth-child(odd) {
+    background:$dark-grey;
+    color:$white;
+}
 .person {
 	.bio {display:none;}
 	@include breakpoint($screen-md-min) {
