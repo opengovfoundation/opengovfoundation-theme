@@ -33,7 +33,7 @@ get_header(); ?>
 				<h1><a href="<?php echo $link; ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
 				<div class="entry">
-				<?php the_content(); ?>
+					<?php the_excerpt(); ?>
 				</div>
 
 			</div> <!-- closes the first div box -->
