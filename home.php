@@ -80,6 +80,7 @@ get_header(); ?>
 							<div class="col-md-4">
 								<div class="caption">
 									<h2>Stay Informed</h2>
+									<p>Sign up for our mailing list.</p>
 								</div>
 							</div>
 							<div class="col-md-8">
