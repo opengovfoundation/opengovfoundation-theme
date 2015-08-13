@@ -10780,7 +10780,7 @@ body.home .mailinglist h2 {
 @media (min-width: 992px) {
   /* line 25, sass/pages/_about.scss */
   .person {
-    min-height: 365px;
+    min-height: 400px;
   }
 }
 /* line 30, sass/pages/_about.scss */

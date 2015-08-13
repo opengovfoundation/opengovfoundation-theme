@@ -25,7 +25,7 @@
 .person {
 	.bio {display:none;}
 	@include breakpoint($screen-md-min) {
-		min-height:365px;
+		min-height:400px;
 	}
 	a:link, a:visited {
 		color:$dark-grey;
