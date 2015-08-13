@@ -42,10 +42,10 @@ get_header(); ?>
 			</div> <!-- closes the first div box -->
 		</div>
 		<hr>
-	<?php endwhile;
+	<?php endwhile; ?>
 		<?php next_posts_link('&laquo; Older Entries') ?>
 		<?php previous_posts_link('Newer Entries &raquo;') ?>
-	wp_reset_postdata();
+	<?php wp_reset_postdata();
 	else : ?>
 
 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
