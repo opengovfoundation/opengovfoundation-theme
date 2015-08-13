@@ -106,7 +106,7 @@ get_header(); ?>
 		  var button = $(event.relatedTarget) // Button that triggered the modal
 		  var name = $(event.relatedTarget).parent().find("h2").text(); // Extract info from data-* attributes
 		  var title = $(event.relatedTarget).parent().find(".title").text(); // Extract info from data-* attributes
-		  var bio = $(event.relatedTarget).parent().find(".bio").text(); // Extract info from data-* attributes
+		  var bio = $(event.relatedTarget).parent().find(".bio").html(); // Extract info from data-* attributes
 		  var image = $(event.relatedTarget).data("img"); // Extract info from data-* attributes
 		  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
 		  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
