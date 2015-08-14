@@ -62,7 +62,7 @@ get_header(); ?>
 					<?php endwhile; ?>
 				</div>
 				<div class="col-md-4">
-					<?php get_template_part('get-involved'); ?>
+
 				</div>
 			</div>
 		</div>
