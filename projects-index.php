@@ -14,7 +14,7 @@ get_header(); ?>
 		</div>
 		<div class="row">
 		<?php $this_page_id=$wp_query->post->ID; ?>
-    	<?php query_posts(array('showposts' => 20, 'post_parent' => $this_page_id, 'post_type' => 'page')); while (have_posts()) { the_post(); ?>
+		<?php query_posts(array('showposts' => 20, 'post_parent' => $this_page_id, 'post_type' => 'page', 'order' => 'ASC')); while (have_posts()) { the_post(); ?>
 			<div class="col-md-4">
 				<div class="thumbnail">
 					<?php the_post_thumbnail(); ?>
