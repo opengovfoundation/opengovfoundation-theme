@@ -21,6 +21,7 @@ get_header(); ?>
 					<div class="caption">
 						<h2><?php the_title(); ?></h2>
 						<p><?php the_excerpt(); ?></p>
+						<a href="<?php the_permalink(); ?>">See details</a>
 					</div>
 				</div>
 			</div>
