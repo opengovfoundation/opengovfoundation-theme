@@ -4,3 +4,10 @@
 	font-weight:bold;
 	@include font-size(16px);
 }
+
+.project {
+	@extend .col-md-6;
+	.thumbnail {
+		min-height: 480px;
+	}
+}
