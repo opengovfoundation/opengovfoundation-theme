@@ -27,13 +27,15 @@ get_header(); ?>
 			<div class="post col-md-10">
 				<?php
 					$link = get_post_meta($post->ID, '_custom_news_source_url', true);
+					$external = true;
 					if(!$link) {
+						$external = false;
 						$link = get_the_permalink();
 					}
 				?>
 
 				<!-- Display the Title as a link to the Post's permalink. -->
-				<h1><a href="<?php echo $link; ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+				<h1 class="news-title"><?php if($external) print '<span class="fa fa-external-link"></span>'; ?><a href="<?php echo $link; ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
 				<div class="entry">
 					<?php the_excerpt(); ?>

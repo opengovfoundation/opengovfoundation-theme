@@ -10837,3 +10837,8 @@ body.home .mailinglist h2 {
 .post h1 a {
   color: #4a4f51;
 }
+/* line 5, sass/pages/_news.scss */
+.post h1 .fa-external-link {
+  margin-left: -50px;
+  margin-right: 10px;
+}
