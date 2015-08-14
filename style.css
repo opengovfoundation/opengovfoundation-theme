@@ -10554,35 +10554,36 @@ header a:hover, header a:active {
 footer.site-footer {
   background: #e9e9e9;
   padding-bottom: 1rem;
+  margin-top: 1rem;
 }
-/* line 4, sass/modules/_footer.scss */
+/* line 5, sass/modules/_footer.scss */
 footer.site-footer p {
   font-size: 14px;
   font-size: 0.875rem;
 }
-/* line 5, sass/modules/_footer.scss */
+/* line 6, sass/modules/_footer.scss */
 footer.site-footer .contact {
   background: #f7f7f7;
   padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
-  /* line 5, sass/modules/_footer.scss */
+  /* line 6, sass/modules/_footer.scss */
   footer.site-footer .contact {
     margin-top: 2rem;
   }
 }
 @media (min-width: 992px) {
-  /* line 5, sass/modules/_footer.scss */
+  /* line 6, sass/modules/_footer.scss */
   footer.site-footer .contact {
     padding-bottom: 0;
   }
 }
-/* line 15, sass/modules/_footer.scss */
+/* line 16, sass/modules/_footer.scss */
 footer.site-footer .nospace {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 19, sass/modules/_footer.scss */
+/* line 20, sass/modules/_footer.scss */
 footer.site-footer .icon {
   width: 100%;
   display: inline-block;
@@ -10590,19 +10591,19 @@ footer.site-footer .icon {
   padding: .5rem;
 }
 @media (min-width: 992px) {
-  /* line 19, sass/modules/_footer.scss */
+  /* line 20, sass/modules/_footer.scss */
   footer.site-footer .icon {
     padding: 1.7rem;
     width: auto;
   }
 }
-/* line 29, sass/modules/_footer.scss */
+/* line 30, sass/modules/_footer.scss */
 footer.site-footer h2 {
   font-family: "Patua One", Georgia, "Times New Roman", Times, serif;
   margin-top: 1rem;
   line-height: 1;
 }
-/* line 35, sass/modules/_footer.scss */
+/* line 36, sass/modules/_footer.scss */
 footer.site-footer h3 {
   font-size: 12px;
   font-size: 0.75rem;
@@ -10612,7 +10613,7 @@ footer.site-footer h3 {
   text-transform: uppercase;
 }
 @media (min-width: 992px) {
-  /* line 35, sass/modules/_footer.scss */
+  /* line 36, sass/modules/_footer.scss */
   footer.site-footer h3 {
     margin-top: .75rem;
   }

@@ -1,6 +1,7 @@
 footer.site-footer {
 	background:lighten($light-grey,7%);
 	padding-bottom:1rem;
+	margin-top: 1rem;
 	p { @include font-size(14px);}
 	.contact {
 		background:darken($white,3%);
