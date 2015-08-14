@@ -10406,8 +10406,13 @@ img {
   max-width: 100%;
 }
 
+/* line 144, sass/modules/_global.scss */
+.modal-open {
+  overflow: visible;
+}
+
 /* Debugging */
-/* line 147, sass/modules/_global.scss */
+/* line 151, sass/modules/_global.scss */
 .TYPE-DEBUG {
   position: absolute;
   top: 0;

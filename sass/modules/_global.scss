@@ -141,6 +141,10 @@ img {
     max-width:100%;
 }
 
+.modal-open {
+    overflow: visible;
+}
+
 /* Debugging */
 
 // Grid overlay based on 32px (2rem * 16px base) line height.
