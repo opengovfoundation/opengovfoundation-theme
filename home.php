@@ -40,7 +40,7 @@ get_header(); ?>
 							<div class="caption">
 								<h2>New on the&nbsp;Blog</h2>
 								<?php
-									$recent_posts = wp_get_recent_posts(array( 'numberposts' => '1'));
+									$recent_posts = wp_get_recent_posts(array( 'numberposts' => '1', 'post_status' => 'publish'));
 									foreach( $recent_posts as $recent ){
 										echo '<p><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </p> ';
 									}
