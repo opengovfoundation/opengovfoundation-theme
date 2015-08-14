@@ -56,7 +56,7 @@ get_header(); ?>
 		<div class="padded-row invert">
 			<div class="container">
 				<h1 class="col-md-12">Projects</h1>
-		    	<?php query_posts(array('showposts' => 3, 'post_parent' => 2616, 'post_type' => 'page')); while (have_posts()) { the_post(); ?>
+				<?php query_posts(array('showposts' => 3, 'post_parent' => 2616, 'post_type' => 'page', 'order' => 'ASC')); while (have_posts()) { the_post(); ?>
 					<div class="col-md-4">
 						<div class="thumbnail">
 							<?php the_post_thumbnail(); ?>
