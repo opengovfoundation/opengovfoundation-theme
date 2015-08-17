@@ -102,7 +102,7 @@ function opengovfoundation_header_style() {
 			background-size: cover;
 		}
 		.home .site-header {
-			background-image: url(<?php print str_replace(array('cropped-', '_header'), array('', '_hero'), $header_image); ?>) no-repeat scroll top;
+			background-image: url(<?php print str_replace(array('cropped-', '_header'), array('', '_hero'), $header_image); ?>);
 		}
 	<?php
 		endif;
