@@ -23,11 +23,11 @@
 function opengovfoundation_custom_header_setup() {
 	$args = array(
 		// Text color and image (empty to use none).
-		'default-text-color'     => '220e10',
-		'default-image'          => '%s/images/headers/circle.png',
+		'default-text-color'     => '',
+		'default-image'          => '',
 
 		// Set height and width, with a maximum value for the width.
-		'height'                 => 230,
+		'height'                 => 200,
 		'width'                  => 1600,
 
 		// Callbacks for styling the header and the admin preview.
@@ -43,21 +43,21 @@ function opengovfoundation_custom_header_setup() {
 	 * %s is a placeholder for the theme template directory URI.
 	 */
 	register_default_headers( array(
-		'circle' => array(
-			'url'           => '%s/images/headers/circle.png',
-			'thumbnail_url' => '%s/images/headers/circle-thumbnail.png',
-			'description'   => _x( 'Circle', 'header image description', 'opengovfoundation' )
-		),
-		'diamond' => array(
-			'url'           => '%s/images/headers/diamond.png',
-			'thumbnail_url' => '%s/images/headers/diamond-thumbnail.png',
-			'description'   => _x( 'Diamond', 'header image description', 'opengovfoundation' )
-		),
-		'star' => array(
-			'url'           => '%s/images/headers/star.png',
-			'thumbnail_url' => '%s/images/headers/star-thumbnail.png',
-			'description'   => _x( 'Star', 'header image description', 'opengovfoundation' )
-		),
+		// 'circle' => array(
+		// 	'url'           => '%s/images/headers/circle.png',
+		// 	'thumbnail_url' => '%s/images/headers/circle-thumbnail.png',
+		// 	'description'   => _x( 'Circle', 'header image description', 'opengovfoundation' )
+		// ),
+		// 'diamond' => array(
+		// 	'url'           => '%s/images/headers/diamond.png',
+		// 	'thumbnail_url' => '%s/images/headers/diamond-thumbnail.png',
+		// 	'description'   => _x( 'Diamond', 'header image description', 'opengovfoundation' )
+		// ),
+		// 'star' => array(
+		// 	'url'           => '%s/images/headers/star.png',
+		// 	'thumbnail_url' => '%s/images/headers/star-thumbnail.png',
+		// 	'description'   => _x( 'Star', 'header image description', 'opengovfoundation' )
+		// ),
 	) );
 }
 add_action( 'after_setup_theme', 'opengovfoundation_custom_header_setup', 11 );
@@ -98,18 +98,11 @@ function opengovfoundation_header_style() {
 		if ( ! empty( $header_image ) ) :
 	?>
 		.site-header {
-			background: url(<?php header_image(); ?>) no-repeat scroll top;
-			background-size: 1600px auto;
+			background: url(<?php print $header_image; ?>) no-repeat scroll top;
+			background-size: cover;
 		}
-		@media (max-width: 767px) {
-			.site-header {
-				background-size: 768px auto;
-			}
-		}
-		@media (max-width: 359px) {
-			.site-header {
-				background-size: 360px auto;
-			}
+		.home .site-header {
+			background: url(<?php print str_replace('_header', '_hero', $header_image); ?>) no-repeat scroll top;
 		}
 	<?php
 		endif;

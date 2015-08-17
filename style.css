@@ -10431,17 +10431,13 @@ h1.border {
 /* line 6, sass/modules/_header.scss */
 body header#masthead {
   height: 12.5rem;
-  background-image: url("images/short_header_bkgnd@2x.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-/* line 13, sass/modules/_header.scss */
+/* line 9, sass/modules/_header.scss */
 body header#masthead div.home-head-block {
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 14, sass/modules/_header.scss */
+  /* line 10, sass/modules/_header.scss */
   body header#masthead h1 {
     font-size: 90px;
     font-size: 5.625rem;
@@ -10449,53 +10445,53 @@ body header#masthead div.home-head-block {
   }
 }
 
-/* line 22, sass/modules/_header.scss */
+/* line 18, sass/modules/_header.scss */
 body.home header#masthead {
   min-height: 50rem;
   padding: 20rem 0 0 0;
 }
-/* line 26, sass/modules/_header.scss */
+/* line 22, sass/modules/_header.scss */
 body.home header#masthead div.home-head-block {
   display: block;
   text-shadow: 1px 1px 5px #000;
 }
 
-/* line 32, sass/modules/_header.scss */
+/* line 28, sass/modules/_header.scss */
 header {
   color: #4a4f51;
   margin: 0;
   padding: 0;
   position: relative;
 }
-/* line 38, sass/modules/_header.scss */
+/* line 34, sass/modules/_header.scss */
 header#masthead {
   color: #ffffff;
 }
-/* line 42, sass/modules/_header.scss */
+/* line 38, sass/modules/_header.scss */
 header button.menu-toggle {
   display: none;
 }
-/* line 46, sass/modules/_header.scss */
+/* line 42, sass/modules/_header.scss */
 header .skip-link {
   display: none;
 }
-/* line 50, sass/modules/_header.scss */
+/* line 46, sass/modules/_header.scss */
 header h2 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-size: 1.5rem;
 }
-/* line 57, sass/modules/_header.scss */
+/* line 53, sass/modules/_header.scss */
 header a:link, header a:visited {
   color: #ffffff;
 }
-/* line 62, sass/modules/_header.scss */
+/* line 58, sass/modules/_header.scss */
 header a:hover, header a:active {
   color: #ffffff;
   text-decoration: none;
 }
 
-/* line 72, sass/modules/_header.scss */
+/* line 68, sass/modules/_header.scss */
 .home-link {
   display: inline-block;
   text-align: left;
@@ -10503,7 +10499,7 @@ header a:hover, header a:active {
   padding: .75rem 15px;
 }
 
-/* line 79, sass/modules/_header.scss */
+/* line 75, sass/modules/_header.scss */
 #navbar {
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -10514,16 +10510,16 @@ header a:hover, header a:active {
   text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 79, sass/modules/_header.scss */
+  /* line 75, sass/modules/_header.scss */
   #navbar {
     text-align: right;
   }
 }
-/* line 93, sass/modules/_header.scss */
+/* line 89, sass/modules/_header.scss */
 #navbar ul li {
   display: inline-block;
 }
-/* line 96, sass/modules/_header.scss */
+/* line 92, sass/modules/_header.scss */
 #navbar ul li a {
   font-size: 16px;
   font-size: 1rem;
@@ -10534,16 +10530,16 @@ header a:hover, header a:active {
   padding: 1.5rem 1rem .5rem 1rem;
 }
 @media (min-width: 992px) {
-  /* line 96, sass/modules/_header.scss */
+  /* line 92, sass/modules/_header.scss */
   #navbar ul li a {
     padding: 1.5rem 2rem .5rem 2rem;
   }
 }
-/* line 107, sass/modules/_header.scss */
+/* line 103, sass/modules/_header.scss */
 #navbar ul li.current-menu-item a, #navbar ul li.current-page-ancestor a, #navbar ul li a:hover {
   border-bottom: 1rem solid #ff9d00;
 }
-/* line 111, sass/modules/_header.scss */
+/* line 107, sass/modules/_header.scss */
 #navbar ul .menu-item-object-custom a {
   font-family: "Libre Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
   text-transform: capitalize;
@@ -10551,7 +10547,7 @@ header a:hover, header a:active {
   font-style: italic;
   background: #00cae5;
 }
-/* line 117, sass/modules/_header.scss */
+/* line 113, sass/modules/_header.scss */
 #navbar ul .menu-item-object-custom a:hover {
   background: #ff9d00;
 }
@@ -10625,22 +10621,16 @@ footer.site-footer h3 {
   }
 }
 
-/* line 2, sass/pages/_home.scss */
-body.home #masthead {
-  background-image: url("images/feature_image_1@2x.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/* line 11, sass/pages/_home.scss */
+/* line 6, sass/pages/_home.scss */
 body.home #projects ul li a:link, body.home #projects ul li a:visited {
   display: block;
   background: #ffffff;
 }
-/* line 17, sass/pages/_home.scss */
+/* line 12, sass/pages/_home.scss */
 body.home .entry-content p {
   line-height: 1.8;
 }
-/* line 20, sass/pages/_home.scss */
+/* line 15, sass/pages/_home.scss */
 body.home .mailinglist h2 {
   text-align: left;
 }
