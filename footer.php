@@ -26,7 +26,7 @@
 						<h3>Physical:</h3>
 						<p>1875 Connecticut Ave NW<br>
 						10th Floor<br>
-						Washington DC 20002</p>
+						Washington DC 20008</p>
 					</div>
 					<div class="col-md-4">
 						<h3>Email:</h3>
