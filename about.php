@@ -80,7 +80,7 @@ get_header(); ?>
 									<?php if ($hascontent) {
     the_post_thumbnail('thumbnail', array( 'class' => ' img-circle' ));
 } else {
-    the_post_thumbnail('thumbnail');
+    the_post_thumbnail(array(350, 350));
 }
                             ?>
 									<div class="caption">
