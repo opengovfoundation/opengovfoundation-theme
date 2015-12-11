@@ -77,12 +77,14 @@ get_header(); ?>
 }
                             ?>
 								>
+                                <span class="thumbnail-container">
 									<?php if ($hascontent) {
     the_post_thumbnail('thumbnail', array( 'class' => ' img-circle' ));
 } else {
     the_post_thumbnail(array(350, 350));
 }
                             ?>
+                        </span>
 									<div class="caption">
 										<h2><?php echo get_the_title() ?></h2>
 										<?php if (get_post_meta($post->ID, "Title", true)) {

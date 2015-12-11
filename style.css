@@ -10796,28 +10796,33 @@ body.home .mailinglist h2 {
   text-align: center;
   display: block;
 }
+/* line 39, sass/pages/_about.scss */
+.person .thumbnail-container {
+  display: block;
+  min-height: 150px;
+}
 
-/* line 40, sass/pages/_about.scss */
+/* line 44, sass/pages/_about.scss */
 .modal-content {
   padding: 1rem 2rem 2rem 2rem;
   border-radius: 0;
   text-align: center;
 }
 @media (min-width: 992px) {
-  /* line 40, sass/pages/_about.scss */
+  /* line 44, sass/pages/_about.scss */
   .modal-content {
     text-align: left;
   }
 }
-/* line 47, sass/pages/_about.scss */
+/* line 51, sass/pages/_about.scss */
 .modal-content img {
   margin-bottom: .25rem;
 }
-/* line 50, sass/pages/_about.scss */
+/* line 54, sass/pages/_about.scss */
 .modal-content h1 {
   margin-bottom: 0;
 }
-/* line 53, sass/pages/_about.scss */
+/* line 57, sass/pages/_about.scss */
 .modal-content p {
   text-align: left;
   line-height: 1.5;
