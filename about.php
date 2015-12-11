@@ -96,7 +96,7 @@ get_header(); ?>
                             ?></div>
                                 <?php if ($hascontent) {
     ?>
-										<a href="#">See details</a>
+										<a>See details</a>
 								<?php
 
 }
