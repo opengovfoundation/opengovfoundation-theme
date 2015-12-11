@@ -38,8 +38,21 @@
 	}
 	.thumbnail-container {
 		display: block;
-		min-height: 150px;
+		height: 150px;
 		text-align: center;
+		font-size: 0;
+
+		&:before {    /* create a full-height inline block pseudo=element */
+		    content: ' ';
+		    display: inline-block;
+		    vertical-align: middle;  /* vertical alignment of the inline element */
+		    height: 100%;
+		}
+
+		img {
+		    display: inline-block;
+		    vertical-align: middle;
+		}
 	}
 }
 .modal-content {

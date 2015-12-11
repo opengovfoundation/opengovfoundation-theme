@@ -10799,31 +10799,46 @@ body.home .mailinglist h2 {
 /* line 39, sass/pages/_about.scss */
 .person .thumbnail-container {
   display: block;
-  min-height: 150px;
+  height: 150px;
   text-align: center;
+  font-size: 0;
+}
+/* line 45, sass/pages/_about.scss */
+.person .thumbnail-container:before {
+  /* create a full-height inline block pseudo=element */
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  /* vertical alignment of the inline element */
+  height: 100%;
+}
+/* line 52, sass/pages/_about.scss */
+.person .thumbnail-container img {
+  display: inline-block;
+  vertical-align: middle;
 }
 
-/* line 45, sass/pages/_about.scss */
+/* line 58, sass/pages/_about.scss */
 .modal-content {
   padding: 1rem 2rem 2rem 2rem;
   border-radius: 0;
   text-align: center;
 }
 @media (min-width: 992px) {
-  /* line 45, sass/pages/_about.scss */
+  /* line 58, sass/pages/_about.scss */
   .modal-content {
     text-align: left;
   }
 }
-/* line 52, sass/pages/_about.scss */
+/* line 65, sass/pages/_about.scss */
 .modal-content img {
   margin-bottom: .25rem;
 }
-/* line 55, sass/pages/_about.scss */
+/* line 68, sass/pages/_about.scss */
 .modal-content h1 {
   margin-bottom: 0;
 }
-/* line 58, sass/pages/_about.scss */
+/* line 71, sass/pages/_about.scss */
 .modal-content p {
   text-align: left;
   line-height: 1.5;
