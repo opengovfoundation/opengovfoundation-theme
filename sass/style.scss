@@ -22,7 +22,7 @@
 // Libraries.
 
 @import 'font-awesome';
-// @import 'compass/css3/transition';
+@import 'compass/css3/transition';
 // @import 'compass/utilities/general/clearfix';
 @import 'breakpoint';
 
@@ -43,7 +43,7 @@
 @import "mixins/rem-font-sizing";
 @import "mixins/sass-prefixer";
 @import "mixins/svg-background-image-fallback";
-@import "mixins/transition";
+// @import "mixins/transition";
 @import "mixins/triangle";
 @import "mixins/truncate";
 

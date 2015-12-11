@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: About Page
- * 
+ *
  * @package WordPress
  * @subpackage Twenty_Thirteen
  * @since Twenty Thirteen 1.0
@@ -13,11 +13,11 @@ get_header(); ?>
 		<div id="content" class="site-content container" role="main">
 
 			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php while (have_posts()) : the_post(); ?>
 				<div class="row padded-row">
 					<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-8'); ?>>
 						<header class="entry-header">
-							<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+							<?php if (has_post_thumbnail() && ! post_password_required()) : ?>
 							<div class="entry-thumbnail">
 								<?php the_post_thumbnail(); ?>
 							</div>
@@ -28,10 +28,10 @@ get_header(); ?>
 
 						<div class="entry-content">
 							<?php the_content(); ?>
-							<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'opengovfoundation' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
-		
+							<?php wp_link_pages(array( 'before' => '<div class="page-links"><span class="page-links-title">' . __('Pages:', 'opengovfoundation') . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' )); ?>
+
 							<footer class="entry-meta">
-								<?php edit_post_link( __( 'Edit', 'opengovfoundation' ), '<span class="edit-link">', '</span>' ); ?>
+								<?php edit_post_link(__('Edit', 'opengovfoundation'), '<span class="edit-link">', '</span>'); ?>
 							</footer><!-- .entry-meta -->
 						</div><!-- .entry-content -->
 
@@ -42,45 +42,83 @@ get_header(); ?>
 				</div>
 			<?php endwhile; ?>
 		<div class="people">
-			<?php 
-			$this_page_id=$wp_query->post->ID;  
-			query_posts(array('showposts' => 20, 'orderby' => 'menu_order', 'order' => 'ASC', 'post_parent' => $this_page_id, 'post_type' => 'page'));
-			if ( have_posts() ) {
-			    while ( have_posts() ) {
-			        the_post();
-			        echo "<div class='row padded-row'>";
-			        echo "<h1 class='col-md-12'>".get_the_title()."</h1>";
+			<?php
+            $this_page_id=$wp_query->post->ID;
+            query_posts(array('showposts' => 20, 'orderby' => 'menu_order', 'order' => 'ASC', 'post_parent' => $this_page_id, 'post_type' => 'page'));
+            if (have_posts()) {
+                while (have_posts()) {
+                    the_post();
+                    echo "<div class='row padded-row'>";
+                    echo "<h1 class='col-md-12'>".get_the_title()."</h1>";
 
-			        $args=array(
-			                'orderby' => 'menu_order',
-			                'order' => 'ASC',
-			                'posts_per_page' => 50,
-			                'post_type' => get_post_type( $post->ID ),
-			                'post_parent' => $post->ID
-			        );
+                    $args=array(
+                            'orderby' => 'menu_order',
+                            'order' => 'ASC',
+                            'posts_per_page' => 50,
+                            'post_type' => get_post_type($post->ID),
+                            'post_parent' => $post->ID
+                    );
 
-			        $childpages = new WP_Query($args);
+                    $childpages = new WP_Query($args);
 
-			        if($childpages->post_count > 0) { /* display the children content  */
-			            while ($childpages->have_posts()) {
-			                 $childpages->the_post();?>
+                    if ($childpages->post_count > 0) { /* display the children content  */
+                        while ($childpages->have_posts()) {
+                            $childpages->the_post();
+                            $hascontent = strlen(get_the_content()) > 0;
+                            ?>
+
 			                <div class="col-md-4">
-								<div class="thumbnail person">
-									<?php the_post_thumbnail('thumbnail', array( 'class' => ' img-circle' )) ?>
+								<div class="thumbnail person"
+								<?php if ($hascontent) {
+    ?>
+									data-toggle="modal" data-target="#exampleModal" data-img='<?php the_post_thumbnail('thumbnail', array( 'class' => ' img-circle' )) ?>'
+								<?php
+
+}
+                            ?>
+								>
+									<?php if ($hascontent) {
+    the_post_thumbnail('thumbnail', array( 'class' => ' img-circle' ));
+} else {
+    the_post_thumbnail('thumbnail');
+}
+                            ?>
 									<div class="caption">
 										<h2><?php echo get_the_title() ?></h2>
-										<p class="title"><?php $key="Title"; echo get_post_meta($post->ID, $key, true); ?></p>
-										<div class="bio"><?php the_content(); ?></div>
-										<a href="#" data-toggle="modal" data-target="#exampleModal" data-img='<?php the_post_thumbnail('thumbnail', array( 'class' => ' img-circle' )) ?>'>See details</a>
+										<?php if (get_post_meta($post->ID, "Title", true)) {
+    ?>
+										<p class="title"><?php echo get_post_meta($post->ID, "Title", true);
+    ?></p><?php
+
+}
+                            ?>
+										<div class="bio"><?php the_content();
+                            ?></div>
+                                <?php if ($hascontent) {
+    ?>
+										<a href="#">See details</a>
+								<?php
+
+}
+                            ?>
+								<?php if (get_post_meta($post->ID, "Link", true)) {
+    ?>
+									<a href="<?php echo get_post_meta($post->ID, "Link", true) ?>">View Site</a>
+								<?php
+
+}
+                            ?>
 									</div>
 								</div>
 							</div>
-			            <?php }
-			        }
-			    echo "</div>";
-			    }
-			}
-			 ?>
+			            <?php
+
+                        }
+                    }
+                    echo "</div>";
+                }
+            }
+             ?>
 		 </div>
 			<!-- BOOTSTRAP MODAL -->
 			<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">

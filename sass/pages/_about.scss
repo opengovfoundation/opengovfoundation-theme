@@ -24,8 +24,12 @@
 }
 .person {
 	.bio {display:none;}
+	@include single-transition(background-color, 0.15s, linear);
 	@include breakpoint($screen-md-min) {
-		min-height:400px;
+		min-height:450px;
+	}
+	&:hover {
+		background-color: $lighter-grey;
 	}
 	a:link, a:visited {
 		color:$dark-grey;

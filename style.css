@@ -10237,15 +10237,6 @@ hr {
     border-color: rgba(255, 215, 0, 0.1);
   }
 }
-/* line 10, sass/mixins/_transition.scss */
-.no-transition {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-  transition: none !important;
-}
-
 /* Global styles. */
 /* line 4, sass/modules/_global.scss */
 html {
@@ -10779,6 +10770,12 @@ body.home .mailinglist h2 {
   color: #ffffff;
 }
 
+/* line 25, sass/pages/_about.scss */
+.person {
+  -webkit-transition: background-color 0.15s linear;
+  -o-transition: background-color 0.15s linear;
+  transition: background-color 0.15s linear;
+}
 /* line 26, sass/pages/_about.scss */
 .person .bio {
   display: none;
@@ -10786,37 +10783,41 @@ body.home .mailinglist h2 {
 @media (min-width: 992px) {
   /* line 25, sass/pages/_about.scss */
   .person {
-    min-height: 400px;
+    min-height: 450px;
   }
 }
-/* line 30, sass/pages/_about.scss */
+/* line 31, sass/pages/_about.scss */
+.person:hover {
+  background-color: #cccccc;
+}
+/* line 34, sass/pages/_about.scss */
 .person a:link, .person a:visited {
   color: #4a4f51;
   text-align: center;
   display: block;
 }
 
-/* line 36, sass/pages/_about.scss */
+/* line 40, sass/pages/_about.scss */
 .modal-content {
   padding: 1rem 2rem 2rem 2rem;
   border-radius: 0;
   text-align: center;
 }
 @media (min-width: 992px) {
-  /* line 36, sass/pages/_about.scss */
+  /* line 40, sass/pages/_about.scss */
   .modal-content {
     text-align: left;
   }
 }
-/* line 43, sass/pages/_about.scss */
+/* line 47, sass/pages/_about.scss */
 .modal-content img {
   margin-bottom: .25rem;
 }
-/* line 46, sass/pages/_about.scss */
+/* line 50, sass/pages/_about.scss */
 .modal-content h1 {
   margin-bottom: 0;
 }
-/* line 49, sass/pages/_about.scss */
+/* line 53, sass/pages/_about.scss */
 .modal-content p {
   text-align: left;
   line-height: 1.5;
