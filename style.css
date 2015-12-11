@@ -10791,7 +10791,7 @@ body.home .mailinglist h2 {
   background-color: #cccccc;
 }
 /* line 34, sass/pages/_about.scss */
-.person a:link, .person a:visited {
+.person a, .person a:visited {
   color: #4a4f51;
   text-align: center;
   display: block;
