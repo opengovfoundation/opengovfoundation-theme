@@ -179,7 +179,7 @@ function opengovfoundation_scripts_styles() {
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.03' );
 
 	// Loads our main stylesheet.
-	wp_enqueue_style( 'opengovfoundation-style', get_stylesheet_uri(), array(), '2013-07-18' );
+	wp_enqueue_style( 'opengovfoundation-style', get_stylesheet_uri(), array(), '2015-12-11' );
 
 	// Loads the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'opengovfoundation-ie', get_template_directory_uri() . '/css/ie.css', array( 'opengovfoundation-style' ), '2013-07-18' );
