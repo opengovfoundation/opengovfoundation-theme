@@ -17,7 +17,6 @@ get_header(); ?>
 					<li><a href="https://twitter.com/FoundOpenGov" class="img-circle"><span class="genericon genericon-twitter"></span></a></li>
 					<li><a href="https://www.facebook.com/Opengovfoundation" class="img-circle"><span class="genericon genericon-facebook"></span></a></li>
 					<li><a href="https://www.youtube.com/channel/UCdSjbzPy92uMG8o03N1JC5g" class="img-circle"><span class="genericon genericon-youtube"></span></a></li>
-					<li><a href="http://opengovfoundation.tumblr.com" class="img-circle"><span class="genericon genericon-tumblr"></span></a></li>
 					<li><a href="<?php bloginfo('rss2_url'); ?>" class="img-circle"><span class="genericon genericon-feed"></span></a></li>
 				</ul>
 			</div>
